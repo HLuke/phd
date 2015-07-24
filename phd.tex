@@ -21,19 +21,21 @@
 
 \title{Statistical Learning of Biological Structure in the Human Brain}
 
-\author{Dr. med. Danilo Bzdok}
+\author{Dr. med. Danilo Bzdok\\
+Assistant professor of social and affective neuroscience}
 
 \end{frontmatter}
 
 %\center{
 "'But above all, master technique and produce original data; 
 all the rest will follow."'
-%
+
 Santiago Ram\'{o}n y Cajal
 %}
 
 \bigskip
 
+\newpage
 \section*{Publications related to the present dissertation}
 \linebreak
 \textit{Original papers}
@@ -54,7 +56,7 @@ revealed by cytoarchitonically informed voxel-based morphometry.
 
 \textbf{Bzdok D*}, Hartwigsen G*, Reid A, Eickhoff SB.
 A hierarchy of the left inferior parietal lobe in social cognition and
-language
+language.
 \textit{Neuroscience and Biobehavioral Reviews}, in press. *equal contributions
 
 \textbf{Bzdok D}, Heeger A, Langner R, Laird A, Fox P, Palomero-Gallagher,
@@ -75,78 +77,280 @@ parcellation, complementary connectivity analyses, and functional decoding.
 \textit{Review and opinion papers}
 
 Eickhoff SB, Thirion B, Varoquaux G, \textbf{Bzdok D}.
-Connectivity-based parcellation: critique & implications.
+Connectivity-based parcellation: critique \& implications.
 \textit{Human Brain Mapping}, in press.
 
-Eickhoff, SB & \textbf{Bzdok D}.
+Eickhoff, SB \& \textbf{Bzdok D}.
 Neuroimaging and modeling. Where is the road to clinical application?
 \texit{Der Psychiater}, 2014, in press. 
 
-Eickhoff S & \textbf{Bzdok D}.
+Eickhoff SB \& \textbf{Bzdok D}.
 [Statistical meta-analyses in imaging neuroscience.]
 \textit{Klinische Neurophysiologie}, 2013, 44:199-203.
 
 \bigskip
 \textit{Book chapters}
 
+\linebreak
 \textbf{Bzdok D} \& Eickhoff SB.
 Statistical learning of the neurobiological of schizophrenia.
 In: \textit{The neurobiology of schizophrenia}, Springer, Heidelberg.
 
+\newpage
 
+\section*{1 Introduction}
 
+\subsection*{1.1 Analytical versus heuristic views of the world}
 
-\section*{Introduction}
-The world is changing.
-The world around us is complex.
-
+The world around us is complex and always changing.
+%
 A large proportion of human research effort is meditated by the 
-"'the unreasonable effectiveness of mathematics in the natural sciences"'
-Wigner (1960).
-Mathematical formalization is a powerful tool to
+"the unreasonable effectiveness of mathematics in the natural sciences."
+This was phrased by the Hungarian-American
+phyicist, mathematician, and Nobel laureate Eugene Wigner (1960).
+The language of mathematics is a powerful tool to
 formalize, describe, and predict phenomena in nature.
 The author emphasizes that it is not immediate that
 natural regularities exist in the world. He goes on to
 say that it might be even more surprising that humans can actually
-find these regularities.
-
-
-derive the unknown from the known.
-
+find and use these regularities.
+We have detailed knowledge of the limitations of mathematical
+assertions.
+%
+An identical reguliarity can often be equally well described in very distant
+branches of mathematics.
+%
+Identical mathematical conclusions have also reemerged from derivation of
+a priori unrelated assertions.
+%
 Surprisingly, the same formal language has proofed very apt in
 the study of completely unrelated topics and diverging scientific disciplines.
-
-
-rules about the world that can be perfectly grasped.
+%
+Rules about the world that can be perfectly grasped.
 This includes
 - 
 -
 
 
-unexpected connections
+math. conceptualization
+formalism
 
-evenly suprising that htese can be transmited from one
-human mind to another.
-
-
-
+build a logical pyramid of theoreoms that lead to always
+more detailed and more general asserations.
 
 
+Although it remains an unresolved question whether we have
+\textit{discovered} or \textit{invented} mathematics,
+there is no doubt
+that they
+evolve as a feature of the cumulative evolution
+of human culture (Tomasello, 2001).
+Even the most abstract mathematical concepts can
+be exchanged without between individuals,
+and thus between distances and generations.
+In sum, mathematical language
+appears to be one of the most
+powerful and defining properties of the human species.
+Wigner concludes the above cited paper with the following words:
+"The miracle of the appropriateness of the language of mathematics
+for the formulation of the laws of physics is a wonderful gift
+which we neither understand nor deserve. We should be grateful for
+it and hope that it will remain valid in future research [...]."
+(p. 14, 1960).
 
-Norvig
+
+
+
+The omnipotence of mathematics has however been drastically challenged
+over the last ten years.
+
+
+classes of phenomena
+
+possible paradigm shift
+
+Peter Norvig 
+American computer scientist
+
+
+Many phenomena in science are stochastic, and the simplest model of them is a probabilistic model; I believe therefore that probabilistic models are our best tool for representing facts about language, for algorithmically processing language, and for understanding how humans process langu
+
+Norvig:
+Speech recognition: 100% of major systems are trained and probabilistic, mostly relying on
+probabilistic hidden Markov models.
 
 humans create machines
 
+But I made the switch: after about 14 years of trying to get language models to work using logical rules, I started to adopt probabilistic approaches
+
+
+give three examples
+
+- language
+- taxics
+
+Protein-Protein Interaktion
+SOLL SYMBOLISIESEN
+aus Aminosäure-Sequenz allein-> Problem: aus dieser 1D Struktur die 3D Faltung des Proteins abzuleiten/vorherzusagen. 30.000 Protein Strukturen k anderen nicht
+momentan v.a. Protein Interaktions-orte identifzieren
+Die Ermittlung der natürlichen Proteinstruktur mit physikalischen Methoden ist zwar für viele, aber bei weitem nicht alle, Proteine möglich und zeitlichem Aufwand verbunden.
+Pharma-Industrie:
+ohne biologisches Wissen
+Vorhersagen ist auf mehreren Abstraktionsebenen möglich:
+Von „Primärstruktur“ -> Quartärstruktur vorhersagen; Sekundär: Wasserstoff-brücken zwischen benachbarte Teilen von AS; Tertiär: 3D Struktur, genaue Atompositionen darin
+Quartär: Protein-Einheit -> Protein-Protein Interaktion vorhersgaen
+Wichtige Biologische Strukturen, die ML finden soll: Bindungsstellen, Faltungsart,
+„Chemoinformatics"
+-> eines der wichtigsten Ziele der Bioinformatik und theoretischen Chemie, diese Eigenschaften von Protein zu entdecken, ohne die Struktur zu kennen - mit AS-Sequenz allein; schneller -> rausfinden, ob ein Protein toxisch oder nicht sein wird: kürzlich deep learning / neuronales Netzwerk -> bessere Vorhersage als alles was in Academia oder Industrie jemals vorher gab im Team hatte Ausbildung in Biologie oder Lebenswissenschaften oder Pharmazie; 2 Wochen investiert
+
+
+-> dieses andere Beispiele haben uns gezeigt, dass
+schlechtes Modell mit vielen Daten ist besser als gutes Modell mit wenig Daten
+reletiviert nun eben gerade das Primat der Mathematik. Derjenige macht die besten Übestzne, der die größte Menge und beste Qualitäten an der die besten Annahmen
 
 
 
+Their program does not decode the numbers. ReCaptcha works by showing the user two images, only one of which is known to the system. The user the known control and which is the genuinely unknown, so has to solve both. If the control image is solved correctly, it is assumed that the submitted correct too, so the system updates its database with this value
+etwas allge
+digitalization von alten Büchern (bei denen sich herkömmliche Algos schwertun mögen)
+Google has been using reCAPTCHA to digitize content for Google Books
+
+
+von algorithmischer Modellierung: das Phänomen in der Natur, das wir hier als wenig bekannt komplex und teilweise vielleicht nicht
+
+
+
+"Big-data is not interesting, if it's not for ML."
+"ML is a set of software algorithms that learn patterns in data without explicit programming model."
+"We have to relax our presumptions of control. Because we can guide the process, but we have no precise control over it." "You do not control what you make but you control the process of its creation."
+"We can process things that exceed beyond human comprehension - As a more humble approach to the world." "Tradionally prosaic, non-tec businesses will be revolutionized by applying big-data and applying ML."
+The Punkt ist - es gibt aktuell vielleicht keine Alternative.
+
+Pietsch:
+big-data science requires (i)data representing all relevant configurations of the examined phenomenon. For complex phenomena, this implies high-dimensional data, i.e. data sets in large number of observations covering a wide range of combinations of these parameters.
+For many phenomena there exists a relatively sudden change when data-driven approaches become effective (Halevy et al. 2009)—a transition point that could be called adata thresh explanation for its existence: ‘For many tasks, once we have a billion or so examples, we essentially have a closed set that represents (or at least approximates) what we need, withou
+On the other hand, the models used in big-data science are often much simpler than the elaborate theoretical structures developed by humans mainly for the purpose of data reduction represent a system, there is no need for complex, hierarchical models anymore—at least with respect topredictions. As Halevy et al write: ‘invariably, simple models and a lot of data on less data.’ (2009, 9) Before providing an overview of the characteristics that distinguish big-data modeling from more conventional scientific modeling let us first take a look at t differences.
+
+
+
+
+
+\subsection*{1.2 Two cultures of statistical modelling}
+
+Statistik - die vielleicht erfolgreichste aller Informationstechnologien
+
+
+
+
+BESCHREIB EINE BEGINNENDE SPALTUNG IN DER STATISTISCHEN MODELLIERUNG VON NATURPHÄNOMENEN
+Second the algorithmic modeling culture (subscribed to by 2% of statisticians and many researchers in biology, artificial intelligence, and other fields that deal with complex pheno black box cannot necessarily be described by a simple model. Complex algorithmic approaches (such as support vector machines or boosted decision trees or deep belief networks) a maps from input to output variables, but we have no expectation that the form of the function that emerges from this complex algorithm reflects the true underlying nature.
+First the data modeling culture (to which, Breiman estimates, 98% of statisticians subscribe) holds that nature can be described as a black box that has a relatively simple underlyin variables to output variables (with perhaps some random noise thrown in). It is the job of the statistician to wisely choose an underlying model that reflects the reality of nature, and t parameters of the model.
 
 
 Breiman (2001)
 
 
+unbox the black box
 
 external world <-> brain
+
+
+
+
+3 components that need to apply when deciding whether a certain problem is a possible target for ML a) a pattern exists (If there is no pattern, then there is no harm in trying ML.)
+
+b) we can not pin down the pattern analytically/mathematically (if we can pin down the problem mathematically GENAU FASSEN K use ML, but it might not create the best model)
+c) we have data on the problem
+
+
+
+1. es existiert ein Muster
+
+2. wir können das Muster nicht analytisch greifen
+
+3. wir haben Daten zu diesem Problem
+
+
+
+Univariate(top-down): (benutzt von Sta6s6kern an Universitäten)
+Classical statistics was fashioned for small problems, a few hundred data points at most, a few parameters.
+- Datamodelling: Vor-Annahme eines stochas5schen Datenmodels in der Blackbox
+Deterministic Newtonian science is majestic, and the basis of modern science too, but a few hundred years of it pretty much exhausted nature’s storehouse of precisely predictable medicine, and economics require a more flexible scientific world view, the kind we statisticians are trained to understand.
+-98% aller Sta6s6ker
+-Ergebnis: wahrscheinlich, mit das angenommene Modell (H0-Modell) korrekt ist, berühmter p-Wert -> Aussage über dieMechnismen Daten/Natur
+-Wich5g: wenn das angenommene Voraussetzungen für die Modell-tests, das den Daten zugrunde liegt, nicht s5mmt, sind auch die hinfällig
+-Model wird vom Forscher erzeugt
+-Opera6onalisierungist vor Modelbildung/testungnö6g, was ja viele Freiheitsgrade hat
+-B: Cox-Model de facto in der medizinischen Literatur etabliert für die Berechnung von Überlebensraten; andere Modelle passen aber > poli6sche und gesellschaYlicher Auswirkungen
+- „leapoffate“
+Breiman: "This enterprise has at its heart the belief thatastatistician,byimaginationandbylooking atthedata,caninventareasonablygoodpara- metric class of models for a complex mechanism devise "Suppose two statisticians, each one with a different approach to data modeling, fit a model to the same data set. Assume also that each one applies standard goodness-of-fit tests, looks at residual fits the data. Yet the two models give different pictures of nature’s mechanism and lead to different conclusions."
+„Thismaysignifythatasdatabecomesmore complex,thedatamodelsbecomemorecumbersome andarelosingtheadvantageofpresentingasimple andclearpictureofnature’smechanism." Ursprünglich designed um auf einem Mechanischen Taschenrechner durchführbar zu sein.
+
+
+
+Mul6variate (bo]om-up): (benutzt von Industriesta6s6kern und jungen Informa5kern/Physiker/Ingenieure; mit Bereich „künstl
+
+Befreiung von Glocken-förmigen Verteilungsannahmen
+-algorithmicmodelling: algorithmische Datenmodellierung behandelt die DateneigenschaYen als unbekannt -> Inhalt der Blackbox ist mysteriös
+-Classifica6on is the analogue of regression when the variable being predicted is discrete, rather than con6nuous
+-2% aller Sta5s5ker
+-eine Funk5on erschaffen, die aus x auf welchem Wege auch immeryvorhersagen kann
+-Ergebnis: konkreter Prozentsatz, wie oY der vorher gelernte Algorithmus eine unbekanntes/ungesehenesdatensetklassifizieren kann; is simply the frac6on of examples in the test set for which the correct label was predicted -Blackboxzwarunbekannt,aberüberErfoplgundMisserfolgunterschiedlicherKategorienvonClassfifiernkanndieMachnismenderBlackboxin -Model wird vom Algorithmus erzeugt
+- studiertes Phänomen hoch komplex und in Teilen vielleicht nicht zu verstehen
+-keine subjek6veOpera6onilisierungnö6g
+-Nachteil:Vohersageerfolgund Einfachheit/Interpre6erbarkeit im Konflikt -> machen zwar keine Annahmen über die Blackbox, sind abe -nicht unbedingt zwangsläufig besser, aber komplexere Perspek6ve auf diesePhänonemeder Natur
+- >100 Daten eigener, 100 und mehre Parameter
+"Predictionisrarelyperfect.Thereareusu- allymanyunmeasuredvariableswhoseeffectis referred to as “noise.” But the extent to which the model box emulates nature’s box is a measure the natural phenomenon producing the data."
+".Ithasevolvednaturallyinenvironments with lots of data and lots of decisions. But you"
+
+
+Gauß distribution are chosen by mere mathematical convenience
+
+
+
+
+
+\subsection*{1.3 Studying the human brain as a complex phenomenon}
+
+
+Bild von einem meiner Kollegen aus Paris entwendet
+trotz 200 Jahren Hirnforschungs immer noch keine universelle Hirntheorie zu einigen, die auf von Hirnforschern unterschiedlicher gebiete al würde;
+-> hat den unangenehmen Effekt, dass besonders in neurowiss. Systembiologie sehr schwer genau Hypothesen zu entwerfen, di eman dann gezielt experimentell testen und so
+Sich den Mechanismen von neuronalener Verarbeitung mit einem Minimum an nötigen Vornahmen, AUS DATEN lernen zu nähern, ist daher ein besonderen attraktiver Zugang
+
+
+
+Biology has a small legacy of abstract theorizing.
+The present thesis is an attempt to the study the brain using
+heuristic, data-driven approaches.
+
+
+
+consciousness
+
+
+epistemology/brain
+
+
+
+
+\subsection*{1.4 Imaging neuroscience}
+
+
+
+
+
+
+\subsection*{1.5 State of the art: Statistical learning approaches in brain imaging}
+
+
+
+
+
+\section*{5 Conclusion}
+
+
+
 
 
 
