@@ -42,11 +42,11 @@ Santiago Ram\'{o}n y Cajal
 
 \textbf{Bzdok D}, Grisel O, Eickenberg M, Thirion B, Varoquaux G.
 Semi-supervised Factored Logistic Regression of High-Dimensional
-Neuroimaging Data. Under review.
+Neuroimaging Data. Under review at NIPS.
 
 \textbf{Bzdok D}, Grisel O, Eickenberg M, Varoquaux G, Poupon C, Thirion B.
 Network-network architecture: Generative models of task activity patterns.
-Under review.
+Under review at Cerebral Cortex.
 
 Bludau S*, \textbf{Bzdok D*}, Gruber O,
 Kohn N, Riedl V, Müller V, Hoffstaedter F, Eickhoff SB.
@@ -102,7 +102,7 @@ In: \textit{The neurobiology of schizophrenia}, Springer, Heidelberg.
 
 \subsection*{1.1 Analytical versus heuristic views of nature}
 
-The world around us is complex and always changing.
+The world around us is complex and volatile.
 %
 A large proportion of human research efforts are meditated by the 
 "the unreasonable effectiveness of mathematics in the natural sciences."
@@ -115,15 +115,15 @@ natural regularities exist in the world. He goes on to
 say that it might be even more surprising that humans can actually
 find and use these regularities to their advantage.
 %
-Starting from simple axiomes we have derived always more complex
-relationships and properties of mathematical objects by formal proofs
+Starting from simple axiomes we have derived always more complicated
+properties of and relationships between mathematical objects by formal proofs
 (Connes A., "A view of mathematics").
 A logical pyramid of theoreoms is built that lead to always
-more detailed and more general asserations.
+more general asserations.
 We also have detailed knowledge of the limitations of these mathematical
 assertions.
 %
-One the one hand,
+On the one hand,
 an identical regularity can often be equally well described in very distant
 branches of mathematics.
 On the other hand,
@@ -138,38 +138,40 @@ and
 ABC
 .
 %
-Many rules about the world that can be perfectly grasped.
+Many rules about the world can thus be perfectly grasped.
 As a simple example,
-Fibonacci numbers reappear in many natural phenomea.
-The number of pels of a flower and the spirals of a pinapple tend
-to be a Fibonacci numbers.
-The family tree of honey bees are also governed by Fibonacci regularities.
+Fibonacci numbers (1, 1, 2, 3, 5, 8, 13, etc.)
+reappear in many natural phenomena.
+The number of petals of a flower and the spirals of a pinapple tend
+to be a Fibonacci sequence.
+The family tree of honey bees is also governed by Fibonacci regularities.
 Even the proportions of human finger bones follow this formalism.
 Knowledge of this mathematical regularity
 allows to impose logical structure on the external world.
 %
 It remains an unresolved question whether we have
 \textit{discovered} or \textit{invented} mathematics.
-Yet, there is no doubt
+Yet, there is probably no doubt
 that mathematical conceptualization
 evolves as a feature of human cultural evolution (Tomasello, 2001).
 Even the most abstract mathematical concepts can
 be exchanged between individuals. Consequently,
-they can be easily exchanged between distances and generations.
+they can be easily exchanged between generations and geographical distances.
 It is interesting to note that there is usually consensus among mathematicians
 about the architecture of their discipline.
-In sum, mathematical language
+In sum, mathematical formalism
 appears to be one of the most
-powerful and defining tools of the human species.
-Wigner concludes the above cited paper with the following words:
+powerful and defining tools of the human species
+(S. Dehaene, "The Number Sense").
+Eugene Wigner concludes the above cited paper with the following words:
 "The miracle of the appropriateness of the language of mathematics
 for the formulation of the laws of physics is a wonderful gift
 which we neither understand nor deserve. We should be grateful for
 it and hope that it will remain valid in future research [...]."
-(Wigner, 1960, p. 14).
+(1960, p. 14).
 
 
-This dogma has however been challenged over the last ten years
+However, this dogma has repeatedly been challenged in the most recent years
 (Halevy et al., 2009).
 
 omnipotence of mathematics
@@ -178,11 +180,14 @@ omnipotence of mathematics
 
 classes of phenomena
 
+Every probabilistic model is a superset of a deterministic model (because the deterministic model could be seen as a probabilistic model where the probabilities are restricted to be 0 or 1)
+
 possible paradigm shift
 
 Peter Norvig 
 American computer scientist
 
+modern heuristic models can have millions of parameters
 
 Many phenomena in science are stochastic, and the simplest model of them is a probabilistic model; I believe therefore that probabilistic models are our best tool for representing facts about language, for algorithmically processing language, and for understanding how humans process langu
 
@@ -204,10 +209,28 @@ condition probabilities of n-grams.
 informal accounts of English grammar count several thousand pages.
 statistical machine translation
 
-Speech recognition: 100% of major systems are trained and probabilistic, mostly relying on
+Machine translation:  of major systems are trained and probabilistic, mostly relying on
 probabilistic hidden Markov models.
 
+All current search engines work this way.
 
+The class of hidden markov models (HMM) become a dominanting feature.
+- a heuristic, probabilistic mathematical model.
+
+advertisement and politics
+
+rule and human-imposed logic/grammar systems never achieved
+convincing success (P. Norvig, 2011, "On Chomsky").
+Such heuristic models might indeed better represent the reality of
+human communication.
+
+modelling the world
+
+Computational linguistic has turned into a 
+
+
+Similar switch may be expected in algorithmic trading, self-driving
+cars.
 
 humans create machines
 
@@ -261,6 +284,18 @@ big-data science requires (i)data representing all relevant configurations of th
 For many phenomena there exists a relatively sudden change when data-driven approaches become effective (Halevy et al. 2009)—a transition point that could be called adata thresh explanation for its existence: ‘For many tasks, once we have a billion or so examples, we essentially have a closed set that represents (or at least approximates) what we need, withou
 On the other hand, the models used in big-data science are often much simpler than the elaborate theoretical structures developed by humans mainly for the purpose of data reduction represent a system, there is no need for complex, hierarchical models anymore—at least with respect topredictions. As Halevy et al write: ‘invariably, simple models and a lot of data on less data.’ (2009, 9) Before providing an overview of the characteristics that distinguish big-data modeling from more conventional scientific modeling let us first take a look at t differences.
 
+
+For many phenomena there exists a relatively sudden change when data-driven approaches become effective (Halevy et al. 2009)—a transition point that could be called a data threshold. 
+
+Halevy et al give a plausible explanation for its existence: ‘For many tasks, once we have a billion or so examples, we essentially have a closed set that represents (or at least approximates) what we need, without generative rules.’
+
+
+Pietsch:
+The notion of a qualitative change from hierarchical to horizontal modeling is further corroborated by a concurrent paradigm shift in statistics, which has been described as a transition from parametric to non-parametric modeling (e.g. Russell & Norvig 2010, Ch. 18.8), from data to algorithmic models (Breiman 2001), or from model-based to model-free approaches. 
+
+While the parametric model consists in a relatively simple mathematical equation, the non-parametric model consists in all the data and an algorithmic procedure for making predictions.
+
+The difference between the two types of models is striking: While parametric models usually are simple equations, the non-parametric models consist in the original data plus an algorithm to derive predictions from the data.
 
 
 
@@ -316,6 +351,15 @@ Deterministic Newtonian science is majestic, and the basis of modern science too
 Breiman: "This enterprise has at its heart the belief thatastatistician,byimaginationandbylooking atthedata,caninventareasonablygoodpara- metric class of models for a complex mechanism devise "Suppose two statisticians, each one with a different approach to data modeling, fit a model to the same data set. Assume also that each one applies standard goodness-of-fit tests, looks at residual fits the data. Yet the two models give different pictures of nature’s mechanism and lead to different conclusions."
 „Thismaysignifythatasdatabecomesmore complex,thedatamodelsbecomemorecumbersome andarelosingtheadvantageofpresentingasimple andclearpictureofnature’smechanism." Ursprünglich designed um auf einem Mechanischen Taschenrechner durchführbar zu sein.
 
+job of the statistician to wisely choose an underlying model that reflects the reality of nature, and then use statistical data to estimate the parameters of the model.
+
+the conclusions made by data modeling are about the model, not about nature
+
+The problem is, if the model does not emulate nature well, then the conclusions may be wrong. 
+
+Parametric methods usually presuppose considerable modeling assumptions. In particular, they summarize the data in terms of a ‘small’ number of model parameters specifying for example a Gaussian distribution or linear dependence, hence the name. 
+
+
 
 
 Mul6variate (bo]om-up): (benutzt von Industriesta6s6kern und jungen Informa5kern/Physiker/Ingenieure; mit Bereich „künstl
@@ -333,15 +377,37 @@ Befreiung von Glocken-förmigen Verteilungsannahmen
 "Predictionisrarelyperfect.Thereareusu- allymanyunmeasuredvariableswhoseeffectis referred to as “noise.” But the extent to which the model box emulates nature’s box is a measure the natural phenomenon producing the data."
 ".Ithasevolvednaturallyinenvironments with lots of data and lots of decisions. But you"
 
+Second the algorithmic modeling culture (subscribed to by 2% of statisticians and many researchers in biology, artificial intelligence, and other fields that deal with complex phenomena), which holds that nature's black box cannot necessarily be described by a simple model. Complex algorithmic approaches (such as support vector machines or boosted decision trees or deep belief networks) are used to estimate the function that maps from input to output variables, but we have no expectation that the form of the function that emerges from this complex algorithm reflects the true underlying nature.
+
+it is that they produce a form that, while accurately modeling reality, is not easily interpretable by humans, and makes no claim to correspond to the generative process used by nature. In other words, algorithmic modeling describes what does happen, but it doesn't answer the question of why.
+
+Instead he asks us to be satisfied with a function that accounts for the observed data well, and generalizes to new, previously unseen data well, but may be expressed in a complex mathematical form that may bear no relation to the "true" function's form (if such a true function even exists).
+
+presupposes few modeling assumptions, e.g. allows for a wide range of functional dependencies or of distribution functions.
+
+data representing all relevant configurations of the examined phenomenon.
+
+In non-parametric modeling, predictions are calculated on the basis of all data. There is no detour over a parametric model that summarizes the data in terms of a few parameters. iii) While thisrenders non-parametric modeling quite flexible with the ability to quickly react to unexpected data, it also becomes extremely data- and calculation-intensive. This aspect accounts for the fact that non-parametric modeling is a relatively recent phenomenon in scientific method.
+
+Non-parametric models allow for novel ways to deal with complexity:
+Conventional parametric modeling in terms of equations, describing for example functional dependencies or distribution functions, already presupposes that the picture has been reduced to a small number of parameters and to relatively simple functional relationships. By contrast, algorithmic modeling does not have such restrictions. It relies less on sophisticated mathematics and more on a brute-force execution of a large number of steps, when for example an algorithm searches a large data-base for similar cases. 
+
+By contrast, parametric modeling usually emphasizes understanding. While parametric modeling often correlates with a realist and reductionist viewpoint, non-parametric modeling has instrumentalist and pluralist connotations.
+
 
 Gauß distribution are chosen by mere mathematical convenience
 
+reach conclusions
 
+
+A statistical model expresses relationships between a set of variables
+whose parameters are learned by training data points.
 
 
 
 \subsection*{1.3 The human brain as a complex phenomenon}
 
+Opportunities lie for example in medicine
 
 Bild von einem meiner Kollegen aus Paris entwendet
 trotz 200 Jahren Hirnforschungs immer noch keine universelle Hirntheorie zu einigen, die auf von Hirnforschern unterschiedlicher gebiete al würde;
@@ -354,7 +420,10 @@ Biology has a small legacy of abstract theorizing.
 The present thesis is an attempt to the study the brain using
 heuristic, data-driven approaches.
 
+a intrinsically probabilistic process
+-> perception depends on the phase of intrinsic oscillations cycles
 
+unresolved nature-nurture debate
 
 consciousness
 
@@ -372,6 +441,22 @@ epistemology/brain
 
 
 \subsection*{1.5 Statistical learning approaches in brain imaging}
+
+
+
+
+
+\subsection*{1.6 the curse of dimensionality????}
+
+
+
+
+Typical big-data problems concern classification or regression of an output variable y with respect to a large number of input parameters x, also called predictor variables or covariates, on the basis of large training sets. 
+
+
+Note that this curse of dimensionality does not automatically apply to all big-data algorithms. To the contrary, it occasionally turns out helpful to artificially increase the dimensionality of the parameter space in methods like decision trees or support vector machines 
+
+
 
 
 
