@@ -41,7 +41,7 @@ Santiago Ram\'{o}n y Cajal
 \textit{Original papers}
 
 \textbf{Bzdok D}, Grisel O, Eickenberg M, Thirion B, Varoquaux G.
-Semi-supervised Factored Logistic Regression of High-Dimensional
+Semi-supervised Factored Logistic Regression for High-Dimensional
 Neuroimaging Data. Under review at NIPS.
 
 \textbf{Bzdok D}, Grisel O, Eickenberg M, Varoquaux G, Poupon C, Thirion B.
@@ -139,14 +139,14 @@ ABC
 .
 %
 Many rules about the world can thus be perfectly grasped.
-As a simple example,
+As another simple example,
 Fibonacci numbers (1, 1, 2, 3, 5, 8, 13, etc.)
 reappear in many natural phenomena.
 The number of petals of a flower and the spirals of a pinapple tend
 to be a Fibonacci sequence.
 The family tree of honey bees is also governed by Fibonacci regularities.
 Even the proportions of human finger bones follow this formalism.
-Knowledge of this mathematical regularity
+Knowledge of such mathematical regularity 
 allows to impose logical structure on the external world.
 %
 It remains an unresolved question whether we have
@@ -159,9 +159,9 @@ be exchanged between individuals. Consequently,
 they can be easily exchanged between generations and geographical distances.
 It is interesting to note that there is usually consensus among mathematicians
 about the architecture of their discipline.
-In sum, mathematical formalism
+In this way, mathematical formalism
 appears to be one of the most
-powerful and defining tools of the human species
+powerful tools and most defining properties of the human species
 (S. Dehaene, "The Number Sense").
 Eugene Wigner concludes the above cited paper with the following words:
 "The miracle of the appropriateness of the language of mathematics
@@ -302,24 +302,86 @@ The difference between the two types of models is striking: While parametric mod
 
 \subsection*{1.2 Two cultures of statistical modelling}
 
-Statistik - die vielleicht erfolgreichste aller Informationstechnologien
+Statistics is a branch of mathematics that has arguably been the
+overall most successful information science.
+%
+Given its ecclectic character, it may come as no surprise that statistics
+has developed both analytical and heuristic strategies
+to model regularities of phenomena in nature.
+Yet, analytical and heuristic statistical cultures
+have emerged independently (Breiman, 2011).
+They are diverging with regard to historical origin, mathematical foundation,
+and conceptual purpose.
+
+The overwhelming majority of statisticians
+follow an analytical regime by
+adhering to \textit{classical statistics} (CS) and performing
+\textit{data modelling}. They hold that nature can be viewed as a black box
+whose inner workings can be described by a small set of
+underlying variables.
+It is up to the statistician in charge
+to choose the model that best reflects nature.
+Data is then used to estimate the parameters of that pre-specified model.
+Classical statistics have dominated research at the universities
+for almost 90 years now.
+Well known members of the CS family include Student's t-test, ANOVA,
+and Chi-squared test.
+\textit{Statistical hypothesis testing} has been introduced in the beginning
+of the last century (Fisher, 1925; Neyman and Pearson, 1928).
+The same approach is stil practiced today in the same form (Goodman, 1999).
+%
+The ensuing \textit{p-value} measures how likely the observed data
+are assuming the non-preferred null hypothesis to find indirect evidence
+for the preferred alternative hypothesis.
+%
+Despite the prevailing presence of p-values,
+it has not been conceived by Fisher as an acid test
+to judge existing versus non-existing effects in nature.
+Rather, the intention was a preliminary tool to
+filter which potential effects should be more explicitly tested (Nuzzo, 2014).
+%
+Notably, if the assumed model is a bad description of
+the natural phenomenon under study
+then the drawn conclusions may be wrong.
+%
+Nevertheless, statistical hypothesis testing probably fit perfectly
+in its time of conception and adoption.
+It was designed for use with mechanical calculators
+(Efron and Tibshirani, 1991). Gaussian distributional assumptions
+have been very useful in many instances for
+mathematical convenience and, hence, computational tractability.
+Additionally, it suited perfectly the Popperian view of
+\textbf{critical empirism} in academic discours:
+scientific progress is to be made by continuous replacement of current
+hypotheses by always more pertinent hypotheses
+using verification and falsification (193X).
+%
+In sum,
+classical statistics was mostly fashioned
+for small problems with few data points that can be modeled 
+by plausible models with a small number of parameters chosen by the
+investigator.
+ 
 
 
+- origin of 5% significance threshold: harvest (Cowles and Davis, 1982)
 
 
-BESCHREIB EINE BEGINNENDE SPALTUNG IN DER STATISTISCHEN MODELLIERUNG VON NATURPHÄNOMENEN
-Second the algorithmic modeling culture (subscribed to by 2% of statisticians and many researchers in biology, artificial intelligence, and other fields that deal with complex pheno black box cannot necessarily be described by a simple model. Complex algorithmic approaches (such as support vector machines or boosted decision trees or deep belief networks) a maps from input to output variables, but we have no expectation that the form of the function that emerges from this complex algorithm reflects the true underlying nature.
-First the data modeling culture (to which, Breiman estimates, 98% of statisticians subscribe) holds that nature can be described as a black box that has a relatively simple underlyin variables to output variables (with perhaps some random noise thrown in). It is the job of the statistician to wisely choose an underlying model that reflects the reality of nature, and t parameters of the model.
-
-
-Breiman (2001)
-
-
-unbox the black box
-
-external world <-> brain
-
-
+In contrast, only a small minority of statisticians
+follow a heuristic regime by
+adhering to \textit{statistical learning} (SL) and performing
+\textit{algorithmic modelling}.
+This statistical framework is frequently adopted by computer scientists,
+physicists, and ingenieurs that are typically working in industry
+rather than academia (Breiman, 2001).
+They hold that natural phenomena
+can be studied by estimating regularities in the inputs and
+outputs to the black box without making assumptions
+about the \"true\ mechanisms in its internals.
+Please note that SL here summarizes the seemingly more specific terms data-mining, pattern recognition, and machine learning that are often employed inconsistently.
+Members of
+the SL family include k-means clustering,
+Lasso/Ridge regression, and support vector machine classification.
 
 
 3 components that need to apply when deciding whether a certain problem is a possible target for ML a) a pattern exists (If there is no pattern, then there is no harm in trying ML.)
@@ -337,37 +399,16 @@ c) we have data on the problem
 
 
 
-Univariate(top-down): (benutzt von Sta6s6kern an Universitäten)
-Classical statistics was fashioned for small problems, a few hundred data points at most, a few parameters.
-- Datamodelling: Vor-Annahme eines stochas5schen Datenmodels in der Blackbox
-Deterministic Newtonian science is majestic, and the basis of modern science too, but a few hundred years of it pretty much exhausted nature’s storehouse of precisely predictable medicine, and economics require a more flexible scientific world view, the kind we statisticians are trained to understand.
--98% aller Sta6s6ker
--Ergebnis: wahrscheinlich, mit das angenommene Modell (H0-Modell) korrekt ist, berühmter p-Wert -> Aussage über dieMechnismen Daten/Natur
--Wich5g: wenn das angenommene Voraussetzungen für die Modell-tests, das den Daten zugrunde liegt, nicht s5mmt, sind auch die hinfällig
--Model wird vom Forscher erzeugt
--Opera6onalisierungist vor Modelbildung/testungnö6g, was ja viele Freiheitsgrade hat
--B: Cox-Model de facto in der medizinischen Literatur etabliert für die Berechnung von Überlebensraten; andere Modelle passen aber > poli6sche und gesellschaYlicher Auswirkungen
-- „leapoffate“
-Breiman: "This enterprise has at its heart the belief thatastatistician,byimaginationandbylooking atthedata,caninventareasonablygoodpara- metric class of models for a complex mechanism devise "Suppose two statisticians, each one with a different approach to data modeling, fit a model to the same data set. Assume also that each one applies standard goodness-of-fit tests, looks at residual fits the data. Yet the two models give different pictures of nature’s mechanism and lead to different conclusions."
-„Thismaysignifythatasdatabecomesmore complex,thedatamodelsbecomemorecumbersome andarelosingtheadvantageofpresentingasimple andclearpictureofnature’smechanism." Ursprünglich designed um auf einem Mechanischen Taschenrechner durchführbar zu sein.
 
-job of the statistician to wisely choose an underlying model that reflects the reality of nature, and then use statistical data to estimate the parameters of the model.
+In the past fifteen years, the growth in algorith- micmodelingapplicationsandmethodologyhas beenrapid.Ithasoccurredlargelyoutsidestatis- tics in a new community—often called machine learning—thatismostlyyoungcomputerscientists
 
-the conclusions made by data modeling are about the model, not about nature
-
-The problem is, if the model does not emulate nature well, then the conclusions may be wrong. 
-
-Parametric methods usually presuppose considerable modeling assumptions. In particular, they summarize the data in terms of a ‘small’ number of model parameters specifying for example a Gaussian distribution or linear dependence, hence the name. 
-
-
-
-
-Mul6variate (bo]om-up): (benutzt von Industriesta6s6kern und jungen Informa5kern/Physiker/Ingenieure; mit Bereich „künstl
+Mul6variate (bo]om-up): (benutzt von Industriesta6s6kern und jungen ; mit Bereich „künstl
 
 Befreiung von Glocken-förmigen Verteilungsannahmen
 -algorithmicmodelling: algorithmische Datenmodellierung behandelt die DateneigenschaYen als unbekannt -> Inhalt der Blackbox ist mysteriös
 -Classifica6on is the analogue of regression when the variable being predicted is discrete, rather than con6nuous
 -2% aller Sta5s5ker
+- data mechanisms unknown
 -eine Funk5on erschaffen, die aus x auf welchem Wege auch immeryvorhersagen kann
 -Ergebnis: konkreter Prozentsatz, wie oY der vorher gelernte Algorithmus eine unbekanntes/ungesehenesdatensetklassifizieren kann; is simply the frac6on of examples in the test set for which the correct label was predicted -Blackboxzwarunbekannt,aberüberErfoplgundMisserfolgunterschiedlicherKategorienvonClassfifiernkanndieMachnismenderBlackboxin -Model wird vom Algorithmus erzeugt
 - studiertes Phänomen hoch komplex und in Teilen vielleicht nicht zu verstehen
@@ -383,6 +424,15 @@ it is that they produce a form that, while accurately modeling reality, is not e
 
 Instead he asks us to be satisfied with a function that accounts for the observed data well, and generalizes to new, previously unseen data well, but may be expressed in a complex mathematical form that may bear no relation to the "true" function's form (if such a true function even exists).
 
+computers -> since 1980 new wave of computer-based methods -> deemphasize mathematical tractability
+(a lot of classical stats is motivated by convenience of Gaussian distribution)
+
+computer-intensive statistical techniques
+
+methatmics less prominent, but justification for validity of algorithms
+
+intricacies between stats approaches (Efron, 2005)
+
 presupposes few modeling assumptions, e.g. allows for a wide range of functional dependencies or of distribution functions.
 
 data representing all relevant configurations of the examined phenomenon.
@@ -394,14 +444,66 @@ Conventional parametric modeling in terms of equations, describing for example f
 
 By contrast, parametric modeling usually emphasizes understanding. While parametric modeling often correlates with a realist and reductionist viewpoint, non-parametric modeling has instrumentalist and pluralist connotations.
 
+Higherpredictiveaccuracyisassociatedwith more reliable information about the underlying data mechanism.
 
-Gauß distribution are chosen by mere mathematical convenience
+
 
 reach conclusions
 
 
 A statistical model expresses relationships between a set of variables
 whose parameters are learned by training data points.
+
+
+
+Different philosophies
+Fortunately, there are two diverging families of statistical methods. These can be framed as classical statistics (CS) and statistical learning (SL).  In yet a different terminology, CS and SL roughly correspond to parametric and non-parametric statistics, respectively (Nichols and Holmes, 2002). It is also important to appreciate that certain statistical methods cannot be easily categorized by this distinction. Statistical methods span a continuum between the two poles of CS and SL. Nevertheless, the two families of statistical methods can be distinguished by a number of properties.
+One of the key differences becomes apparent when thinking of the neurobiological phenomenon under study as a black box (Breiman, 2001). CS typically aims at modeling the black box by making a set of accurate assumptions about its content, e.g. the nature of the signal distribution. SL typically aims at finding any way to model the output of the black box from its input while making the least assumptions possible (Abu-Mostafa et al., 2012). In CS the phenomenon is therefore treated as partly known (i.e., the stochastic processes that generated the data), whereas in SL the phenomenon is treated as complex, completely unknown, and partly unknowable. In this way, CS tends to be analytical (i.e., imposing mathematical rigor on the phenomenon), whereas SL tends to be heuristic (i.e., finding useful approximations to the phenomenon). CS assumes a given statistical model at the beginning of the investigation, whereas in SL the model parameters and at times even the model structure (e.g., in decision-tree based learning algorithms) are generated in the process of the statistical investigation. In more formal terms, CS therefore closely relates to parametric statistics for confirmatory data analysis, whereas SL closely relates to non-parametric statistics for exploratory data analysis. In more practical terms, CS is typically applied to experimental data, where the variables were controlled by the investigator (i.e., system under studied is perturbed), while SL is typically applied to observational data without such structured influence (i.e., system is left unperturbed) (Domingos, 2012). The work unit for CS is the quantified significance associated with a statistical relationship between few variables given a pre-specified model. The work unit for SL is the quantified robustness of patterns between many variables or, more generally, the robustness of special structure in the data (Hastie et al., 2011). CS therefore tests for a particular structure in the data, whereas SL explores and discovers structure in the data. Formally, CS thus resorts to data modeling, e.g., imposing an a priori model in a top-down fashion, whereas SL resorts to algorithmic modeling, e.g. fitting a model as a function of the data at hand in a bottom-up fashion. Intuitively, the truth is believed to be in the model (cf. Wigner, 1960) in a CS framework, while it is believed to be in the data (cf. Halevy et al., 2009) in a SL framework. As a drastically oversimplified, yet educational conclusion, CS preassumes and tests a model for the data, whereas ML learns a model from the data.
+
+Taken together, CS assumes that the data behave according to known mechanisms, whereas SL exploits computer algorithms to treat the data mechanisms as unknown. Again, we caricature the dichotomy in statistical methodology in neuroimaging by oversimplification for pedagogical reasons. Bayesian statistics (Ashburner et al., 1997; Friston et al., 2002) do for example not strictly qualify for only CS or SL. Bayesian statistics are orthogonal to the CS-SL distinction and can be adopted in both methodological families in various flavors. Neither can the terms univariate versus multivariate (i.e., relying on one versus more than one input variable) be clearly grouped into either CS or SL. CS can be divided into uni- and multivariate groups of statistical tests (Ashburner and Kloppel, 2011; Friston et al., 2008), while SL is largely focused on high-dimensional (hence intrinsically multivariate) problems. However, univariate CS methods are routinely incorporated into SL analysis pipelines (e.g., ANOVA [CS] for feature selection [SL] or significance testing [CS] of a classification result [SL]). Importantly, neither CS nor SL can generally be considered superior. This is captured by the no free lunch theorem stating that no single statistical strategy can consistently do better in all circumstances (Domingos, 2012; Wolpert, 1996). The challenge relies in choosing the statistical approach that is best suited to the neurobiological phenomenon under study and the neuroscientific research object at hand.
+
+Different histories
+The independent historical origin of the two statistical families is even witnessed by the most basic terminology. In the CS literature inputs to statistical modeling are classically called independent variables or, more recently, predictors, while these are commonly referred to as features in the SL literature (Hastie et al., 2011).
+
+
+SL:
+- In the big-data era the datasets are continously increasing in size and complexity. As a consequence, an increasing number of CS tools become less attractive (Manyika et al., 2011). This is a trend that is not specific to neuroimaging research but also takes places in other scientific disciplines, for example weather forecasting and economic predictions, and beyond (Breiman, 2001)
+- users: SL have been used for decades by statisticians in industry (cf. Daniel and Wood, 1971); mostly non-statisticians, especially computer scientists, physicists, and engineers; approximately a minority of 2% according to Breiman2001
+- middle of the 80'ies new algorithms neural networks and decision trees
+- middle of the 95'ies: SVMs by Vapnik: SVM proofed to be better than the back then de-facto-standard neural networks in both classification and regression problems
+- VC bounds by Vapnik -> most relevant theoretical contribution to SL, because it mathematically proofs that learning is possible
+- Classification approaches were early used in structural neuroimaging (Herndon et al., 1996) and contributed to improved image preprocessing performance (Ashburner and Friston, 2005).
+- Their popularity of SL in neuroimaging increased dramatically in the attempt of "mind-reading" or "decoding" cognitive processes from neural activity patterns (Haynes and Rees, 2005; Kamitani and Tong, 2005)
+- Recently increasing effort towards disease classification, although often not in an aim to characterize underlying pathophysiology
+
+Different theories
+As a result of their separate historical origin, CS and SL rely on distinct conceptual frameworks, revolving around hypothesis testing versus statistical learning theory.
+
+CS:
+In the spirit of Karl Paper's (1935/2005) emphasis on falsification of hypotheses as the foundation of empirical research, CS started in adopting a principled approach based on formulating and testing hypotheses (Fisher, 1925; Neyman and Pearson, 1928). The rationale behind hypothesis falsification is that even a lot of evidence cannot confirm a given theory in an inductive way, while a single counter example is able to proof a theory wrong in a deductive way.
+
+The hypotheses to be tested should be a precisely formulated derivation from new theories extending the current state of a field. The new hypotheses should precisely contradict what is generally believed to be true in that field. The statement reflecting general belief is expressed in the null hypothesis (H0), while the innovative hypothesis is expressed in the alternative hypothesis (H1). The null hypothesis should be directly deducible from the alternative hypothesis alone.
+
+The investigator seeks to proof the null hypothesis wrong thus confirming the initially intended alternative hypothesis. If the null hypothesis is successfully rejected by the test statistic, rendering the alternative hypothesis more likely. The latter hypothesis more confidently explains the phenomenon under study and should hence be accepted as the new general believe.
+To exclude the possible rejection due to the idiosyncracy of the tested sample, not true in the general population, although the null hypothesis is correct, a prespecified threshold needs to be exceeded for confident rejection. This is the significance threshold alpha, conventionally 0.05.
+That is, if the result has a probability of only 5% of being true under the null hypothesis (P(result|H0)), it is deemed significant. Please note that this statement of significance does not equate with the probability of the null hypothesis (P(H0)), alternative hypothesis (P(H1)), result of the test statistic (P(result)), or the null hypothesis given the result (P(H0|result)) (Markus, 2001; Pollard and Richardson, 1987).
+It is important to appreciate that such inferential statistics can neither find a piece of "truth" nor "proof" a certain statement. That is because every rejection of H0 to choose H1 cannot exclude the probability of committing an alpha error. Put differently, statistical hypothesis testing does not lead to truth but to probabilities of how well the result can be reconciled with H0. Importantly, a significant classical test statistic is a direct judgment about the unfavored hypothesis (H0) but not the favored hypothesis (H1). On the one hand, a significant result indirectly supports the hypothesis initially advocated by the investigator (H1). On the other hand, a non-significant result does not confirm H0 but indicates that the test statistic was not suitable to assess the hypothesis pair. In fact, a non-significant result is not an instance of falsification as it does neither proof nor disproof a theory. The most important reason for a non-significant result is an insufficient sample size.
+
+In sum, successful rejection of H0, intended by the investigator, indicates that H1 should temporarily be assumed to be correct (until it is rejected itself in the future), instead of proofing or confirming a certain theory. Taken together, classical hypothesis testing continuously replaces hypotheses explaining a phenomenon in nature for better hypotheses with more empirical support in a Darwinian selection process.
+
+Another relevant property is the dependence of significance of the sample size. Any H0 can be rejected and any difference in the sense of H1 can reach significance given a sufficiently large sample.
+Inexact hypotheses of the type "there is a statistical relationship between variable A and B" (such as in a Pearson correlation) can thus be confirmed in a very large sample even if the relationship is very small.
+
+Given the centrality of hypothesis evaluation, CS entails statistical issues when making such a comparison more than once (multiple comparisons problem) that needs to be accounted for. Note that this property of CS has perhaps no obvious analogue in SL.
+
+SL:
+In SL two equally important theoretical frameworks peacefully coexist. The concept of Vapnik-Chervonenkis dimensions (VC dimensions) is crucial in statistical learning theory, while the concept of bias-variance tradeoff is highly relevant in both abstract theory and practical everyday application of SL (Hastie et al., 2011). The VC dimensions mathematically formalize the circumstances under which learning can be successful (Vapnik, 1989, 1996). This comprises any instance of learning from a number of observations to derive general rules that capture properties of phenomena in nature, including human learning humans and computer learning. As a side note, both human and computer learning are theoretically more conceivable in a probabilistic rather than deterministic sense (Abu-Mostafa et al., 2012; Dayan et al., 1995; Friston, 2010; Gregory, 1980). VC dimensions provide a probabilistic measure whether a certain model is able to learn a distinction with respect to a given dataset. Formally, the VC dimensions measure the complexity capacity of a class of functions by counting the number of data points that can be cleanly divided (i.e., "shattered") into distinct groups as a result of the flexibility of the function set. Intuitively, the VC dimensions provide a guideline for the largest set of examples fed into a learning function such that we can guarantee zero distinction errors. They can be viewed as the effective number of parameters or the degrees of freedom. In this way, the VC dimensions concretize the circumstances under which a class of functions is able to learn from a finite amount of data to successfully predict a given phenomenon in previously unseen data. Practically, good models have finite VC dimensions: Its assessed performance in a sufficiently large amount of data used for learning confidently approximates the theoretically expected performance in any new data. Bad models have infinite VC dimensions: Regardless of the available amount of data, it is impossible to make generalization conclusions on unseen data. Note that the VC dimensions are unrelated to the target function (i.e., unknown mechanisms underlying the studied phenomenon in nature) but relate to the models used to approximate that target function. Even if the VC dimensions predict learning as very likely, it is still possible that generalization from a concrete dataset fails. Yet, such a dataset is theoretically unlikely to occur. Although the concept of VC dimensions is the most important achievement in statistical learning theory (Abu-Mostafa et al., 2012), they can only be explicitly computed for simple models. Hence, investigators are often restricted to an approximate bound for VC dimensions limiting their use to theoretical considerations.
+The bias-variance tradeoff is a stand-alone theoretical framework that is more applicable in practice and provides a different angle on learning from data (e.g., Geman et al., 1992). It is more explicitly mentioned in SL, although it applies to statistical analysis in general. As George Box famously noted , a model is an oversimplication of the studied phenomenon, and thus a distortion of the truth. Choosing the right model amounts to the right balance between bias and variance. Bias denotes the difference between the target function and the average of the function space derived from a model. Intuitively, the bias describes how rigid the functions derived from a model are. When using high-bias models, even for larger perturbations of the data statistical learning results in virtually the same best approximating function. Variance denotes the difference between the best approximating function from the function space and the average of the function space. Intuitively, variance describes how different the functions derived from a same model can be. When using high-variance models, even for small perturbations of the data statistical learning results in very different best approximating functions. In sum, as the model complexity increases, bias tends to decrease and variance tends to increase, and vice versa. A simple model instantiates simple functions featuring high bias and low variance. They do not well simulate the target function (i.e., bad approximation) but are good at generalizing to unseen data (i.e., good generalization). Contrarily, complex models feature low bias and high variance. They have a better chance of well approximating the target function at the price of being less able to generalize well to new data. That is because complex models tend to adapt too well to the data used for learning to the point of fitting noise. This is called overfitting and occurs when the learning model integrates information independent of the target function and idiosyncractic to the dataset. The bias-variance decomposition captures the fundamental tradeoff in statistical modeling between approximating the behavior of the studied phenomenon and generalizing to new data describing that behavior. If we know the target function, we can explicitly compute the bias-variance tradeoff, in contrast to the inability of computing the VC dimensions of non-trivial models. The bias-variance tradeoff illustrates the core challenge in SL of choosing a model that is able to find a well approximating function given the available data. The bias-variance tradeoff can also practically explain why successful application of SL mainly relies on three factors: i) the (known) amount of available data, ii) the (not precisely known) amount of noise in these, and iii) the (unknown) complexity of the target function.
+
+
+
+
+
 
 
 
@@ -415,38 +517,63 @@ trotz 200 Jahren Hirnforschungs immer noch keine universelle Hirntheorie zu eini
 Sich den Mechanismen von neuronalener Verarbeitung mit einem Minimum an nötigen Vornahmen, AUS DATEN lernen zu nähern, ist daher ein besonderen attraktiver Zugang
 
 
+It has been argued that classical functional neuroimaging applications
+are insufficient to infer structure-function relationships
+without formal modelling (Stephan, 2004).
+-> towards formalized descriptions of SFRs
+
 
 Biology has a small legacy of abstract theorizing.
 The present thesis is an attempt to the study the brain using
 heuristic, data-driven approaches.
+
+neurobiological mechanisms
 
 a intrinsically probabilistic process
 -> perception depends on the phase of intrinsic oscillations cycles
 
 unresolved nature-nurture debate
 
+Given the lack of focal structural changes in almost all psychiatric dis- eases
+
 consciousness
+
+
 
 
 epistemology/brain
 
+why ML is attractive
+nature produces data in a black box whose insides are complex, mysterious, and,atleast,partlyunknowable.Whatisobserved
+
+
+\subsection*{1.4 the curse of dimensionality????}
+
+Richard Bellman
+
+Inanastronomyandstatisticsworkshopthis year, a speaker remarked that in twenty-five years we have gone from being a small sample-size science toaverylargesample-sizescience.Astronomical data bases now contain data on two billion objects comprisingover100terabytesandtherateofnew information is accelerating.
+
+HCP / TERA
+
+
+- difficulty of finding pertinent hypotheses and increasing motivation towards multi-site studies and ever increasing sample sizes currently challenge the CS foundation of neuroimaging
 
 
 
-\subsection*{1.4 Imaging neuroscience}
+
+\subsection*{1.5 Imaging neuroscience}
 
 
 
 
 
 
-\subsection*{1.5 Statistical learning approaches in brain imaging}
+\subsection*{1.6 Statistical learning approaches in brain imaging}
 
 
 
 
 
-\subsection*{1.6 the curse of dimensionality????}
 
 
 
