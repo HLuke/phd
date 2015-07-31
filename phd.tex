@@ -273,13 +273,14 @@ In sum,
 observing a phenomenon in nature a sufficient number of times
 might be sufficient to
 algorithmically extract
-the heuristics of its behavior.
+the heuristics of its interaction behavior with the world.
 This has recently entailed a shift
 of attentional focus from model complexity to data complexity.
-In the absence of ab analytical alternative access,
+In the absence of any analytical alternative access,
 simple mathematical models can thus automatically
 formalize diverse classes of natural phenomena
-depending on the quality and quantity of the available data resources.
+depending on the quality and quantity of
+the available data resources.
 
 
 \subsection*{1.2 Two cultures of statistical modelling}
@@ -422,7 +423,7 @@ that are emulated by a mathematical function
 created on-the-fly by a machine.
 
 
-It is also important to appreciate that certain statistical
+Importantly, certain statistical
 methods cannot be easily categorized by the CS-SL distinction.
 Statistical methods span a continuum between the two poles of CS and SL.
 Nevertheless, the two families of statistical methods can be distinguished by a number of properties.
@@ -485,7 +486,7 @@ whereas SL implements algorithmic modeling by fitting
 a model as a function of the data at hand in a bottom-up fashion.
 %
 Intuitively, the truth is believed
-to be in the model (cf. Wigner, 1960) in the CS-contrained world,
+to be in the model (cf. Wigner, 1960) in a CS-contrained world,
 while it is believed to be in the data
 (cf. Halevy et al., 2009) in a SL-constrained world.
 As a drastically oversimplified, yet useful, conclusion,
@@ -592,9 +593,156 @@ analogous to language translation and drug discovery
 
 
 
-\subsection*{1.4 the curse of dimensionality????}
+\subsection*{1.4 The curse of dimensionality}
 
-Richard Bellman
+
+today's neuroimaging methods are highly resolved in
+space (e.g., fMRI and PET)
+or
+time (e.g., EEG and MEG).
+
+
+a useful approximation to the targer function that
+we do not know
+
+
+Accustomed to regularities in 3D neighborhoods,
+human intuition is often led astray in
+how data behave in
+input spaces with an extreme number of (random) variables
+(Domingos, 2012).
+
+
+The mere number of input variables poses
+statistical challenges
+
+features many ramifications
+
+coined (1961, Bellman)
+
+naive
+
+disturbing
+
+
+high-dim. hypercube: 
+The more dimensions $p$ the space,
+the further each data point from the point of origin
+(Hastie et al., 2011).
+
+Conter-intuitively,
+measuring the distance of one point to it's close,
+uniformly distributed neighbors
+in a very high-dim. space,
+entails an almost shell-like occurrence probability of
+that points neighbors.
+
+Sampling in any given neighborhood is so sparse that
+data points will be closer to the (random) outer borders of that neighborhood,
+rather than to any of their neighboring points the sampling space.
+
+
+Any method that attempts to pro- duce locally varying functions in small isotropic neighborhoods will run into problems in high dimensions—again the curse of dimensionality. And conversely, all methods that overcome the dimensionality problems have an associated—and often implicit or adaptive—metric for measuring neighbor- hoods, which basically does not allow the neighborhood to be simultane- ously small in all directions.
+
+Each of the classes has associated with it one or more parameters, sometimes appropriately called smoothing parameters, that control the effective size of the local neighborhood.
+
+models are built up by employing some kind of search mechanism.
+
+
+That is,
+when approximating a hypersphere by recourse to a surrounding hypercube,
+the probability mass of the hypercube
+would almost entirely lie outside the hypersphere
+(Domingos, 2012).
+
+
+Consequently, all data samples look largely identical
+in high dimensions every.
+
+Why not just constrain the space of possible functions to those functions that I consider to be the good ones. The art is to find the right "function space" between "under fitting" and "overfitting".
+
+hypothesis set
+
+
+
+As we do not know the target function,
+we do not know to what extent the assumed special structure exists
+-> this makes it heuristic character
+
+
+knowledge of special structure of the phenomenon under study
+can reduce both \textit{bias}
+(i.e., difference between the target function and
+the average of the function space derived from a model)
+and
+\textit{variance}
+(i.e., difference between the best approximating function 
+from the function space and
+the average of the function space).
+
+This is a rare opportunity in SL because increasing
+for instance the model complexity
+typically increases the variance and lowers the bias, and vice versa.
+
+
+In all endeavors in ML, the target function is unknown. 
+ML tries to make the least assumptions and covers the most territory.
+
+different restrictions lead to different
+best approximating functions.
+
+How to decide on the nature of the restrictions is based on considerations outside of the data.
+The number of possibile limiations is infinite.
+
+The restricted function approximations
+will thus be the reoccurring theme of the following chapters.
+
+
+Our interpretational spaces are tightly constrained by these
+complexity restrictions.
+
+--------------
+
+taming 
+
+major concerns
+a) overfitting
+b) high variance
+
+major remedies
+a) highly regularized approaches often become method of choice
+
+
+Fortunately, there is an effect that partly counteracts the curse, which might be called the“blessing of non-uniformity.” In most applications examples are not spread uniformly thr- oughout the instance space, but are concentrated on or near a lower-dimensional manifold. Learners can implicitly take advantage of this lower effective dimension, or algorithms for explicitly reducing the dimensionality can be used
+(Domingos, 2012).
+
+
+
+Is basically explicitly forbidding some hypotheses, which reduces the VC dimensions and thus increases the generalization.
+
+assist/
+guide the statistical estimation process
+
+probability masses
+
+
+Hastie: assumption of independence -> creatly reduces number of parameters in the model -> often results in efficient and interpretable classifiers
+
+
+Bishop: solutions to high dimensionality
+a) First, real data will often be confined to a region of the space having lower effective dimension- ality, and in particular the directions over which important variations in the target variables occur may be so confined.
+
+b) Second, real data will typically exhibit some smoothness properties (at least locally) so that for the most part small changes in the input variables will produce small changes in the target variables, and so we can ex- ploit local interpolation-like techniques to allow us to make predictions of the target variables for new values of the input variables. Successful pattern recognition tech- niques exploit one or both of these properties. 
+
+Dimensionality reduction techniques are also used to reduce two undesired characteristics in data namely noise (variance) and redundancy (highly correlated variables)
+
+
+
+
+The wisdom consists in
+
+
+--------------
 
 Inanastronomyandstatisticsworkshopthis year, a speaker remarked that in twenty-five years we have gone from being a small sample-size science toaverylargesample-sizescience.Astronomical data bases now contain data on two billion objects comprisingover100terabytesandtherateofnew information is accelerating.
 
@@ -604,8 +752,10 @@ HCP / TERA
 - difficulty of finding pertinent hypotheses and increasing motivation towards multi-site studies and ever increasing sample sizes currently challenge the CS foundation of neuroimaging
 
 
-Pietsch:
-The notion of a qualitative change from hierarchical to horizontal modeling is further corroborated by a concurrent paradigm shift in statistics, which has been described as a transition from parametric to non-parametric modeling (e.g. Russell & Norvig 2010, Ch. 18.8), from data to algorithmic models (Breiman 2001), or from model-based to model-free approaches.
+In sum,
+statistical learning can be viewed as juggling with
+restrictions to complexity.
+
 
 
 \subsection*{1.5 Imaging neuroscience}
@@ -637,6 +787,10 @@ Note that this curse of dimensionality does not automatically apply to all big-d
 
 Third, regarding data analysis techniques, it has been proposed to leverage ML as a particularly powerful tool to investigate the neural correlates of two interacting brains (Konvalinka & Roepstorff 2012). ML promises to extend the representational agenda of fMRI investigations (i.e., activation-based analysis) and to an informational agenda (i.e., pattern-information-based analysis) (Kriegeskorte et al., 2006; Mur et al., 2009). In particular, multivariate ML approaches are able to address the four questions whether, where, when and how (Brodersen, 2009). ML can provide new evidence whether a given type of information is encoded by neural activity, where a given type of information is neurally encoded, when it is processed/generated/bound and how information is neurally processed in the human brain. Moreover, single-individual fMRI analyses already pose a high-dimensional statistical problem. Performing two-individual fMRI analyses thus imposes an even more challenging "curse of dimensionality" (Hastie et al., 2011). Automated statistical learning of robust structure (i.e., informational patterns) in large quantities of (neuroimaging) data is a core feature of ML approaches. In this way, the flexibility and capability of ML algorithms for pattern mining in extensive data resources make it particularly attractive for the statistical mastery of online two-brain interaction.
 
+
+
+Pietsch:
+The notion of a qualitative change from hierarchical to horizontal modeling is further corroborated by a concurrent paradigm shift in statistics, which has been described as a transition from parametric to non-parametric modeling (e.g. Russell & Norvig 2010, Ch. 18.8), from data to algorithmic models (Breiman 2001), or from model-based to model-free approaches.
 
 
 
