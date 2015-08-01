@@ -206,7 +206,6 @@ language models that can cope with real-world settings.
 In contrast, statistical machine translation was more successful
 by implementing probabilistic Hidden Markov models
 as a heuristic approach.
-.
 The class of hidden markov models (HMM)
 thus became a dominanting feature
 of computational linguistics.
@@ -287,6 +286,8 @@ the available data resources.
 
 Statistics is a branch of mathematics that has arguably been the
 overall most successful information science.
+Statistics aim at extracting information from data
+about the mechanisms in nature that generated this data.
 %
 Given its eclectic character, it may come as no surprise that statistics
 has developed both analytical and heuristic strategies
@@ -438,7 +439,8 @@ This is captured by the \textit{no free lunch theorem}
 stating that no single statistical strategy can#
 consistently do better in all circumstances (Domingos, 2012; Wolpert, 1996).
 The challenge relies in choosing
-the statistical approach that is best suited to the neurobiological phenomenon under study and the neuroscientific research object at hand.
+the statistical approach that is best suited
+to the neurobiological phenomenon under study and the neuroscientific research object at hand.
 
 
 Regarding their conceptual purpose, CS and SL exhibit various differences.
@@ -493,17 +495,32 @@ As a drastically oversimplified, yet useful, conclusion,
 CS preassumes and tests \textit{a model for the data},
 whereas SL learns \textit{a model from the data}.
 %
+Indeed,
+both human and computer learning are theoretically
+more conceivable in a probabilistic rather than
+deterministic sense
+(Abu-Mostafa et al., 2012; Dayan et al., 1995; Friston, 2010; Gregory, 1980).
+Moreover, each probabilistc model can be viewed as a superset
+of a deterministic model (P. Norvig, "On Chomsky").
+%
 Taken together,
 CS assumes that the data behave according to known mechanisms,
 whereas SL exploits
 computer algorithms to avoid data mechanism specifications.
 
 
-\subsection*{1.3 The human brain as a complex phenomenon}
+\subsection*{1.3 The human brain as a complex phenomenon in nature}
 
 - studiertes Phänomen hoch komplex und in Teilen vielleicht nicht zu verstehen
 
 Opportunities lie for example in medicine
+
+Mesulam:
+Monkey brain lacks many of complicated behaviors of interest
+
+Mesulam:"cognitive evolution for million years was confined to transition from accidentally sharpened stones to deliberately sharpened ones"
+
+
 
 biologicla plausabiliby
 
@@ -527,6 +544,15 @@ There are more reasons why the words and concepts social neuroscientists use sho
 
 Innovative potential may, therefore, lie in investigating the so-called social brain by using alternative approaches that are less reliant on pre-assumed terms and concepts, but exploratory and data-driven instead. Machine learning (ML) provides such a methodological framework.
 
+Bengio:
+convergence between algorithmic,...blah blah architecturses
+
+"The complexity of the nervous system is so great,
+its various association systems an cell masses so numerous and
+complex, and challenging,
+that understanding will forver lie beyond our most committed efforts.
+"
+Cajal (1909)
 
 Statistical methods with non-parametric properties, often summarized as "multivariate pattern analysis" (MVPA), have recently gained popularity in neuroimaging. In particular, ML approaches are well suited for discovering complex structure between high-dimensional neuroimaging data (mostly functional magnetic resonance imaging) and variables of interest (e.g. external stimuli or experimentally imposed cognitive sets). 
 
@@ -582,6 +608,30 @@ In non-parametric modeling, predictions are calculated on the basis of all data.
 
 By contrast, algorithmic modeling does not have such restrictions. It relies less on sophisticated mathematics and more on a brute-force execution of a large number of steps
 
+However, there is still uncertainty about how the clinical symptoms of schizophrenia relate to the neurobiology of the human brain. 
+
+, there might be a non-trivial relationship in the psychiatric disorders between the neurobiological endophenotype and the clinical exophenotype as captured by the BDI, PANSS, and ADOS questionnaires.
+
+-> CS is one huge implicit assumption:
+the underlying semantics concepts of the forumulated hypotheses are true
+
+There are more reasons why the words and concepts social neuroscientists use should receive increased attention. Conducting studies based on hypotheses that preassume the biological validity of traditional psychological categories, when, as a first example, comparing brain responses to "emotional" versus "cognitive" stimuli, constitute a strong a priori assumption about how brain networks are organized. Yet, it remains elusive how and to what extent psychological terms, such as emotion and cognition (Pessoa, 2008; Van Overwalle, 2011), map onto regional brain responses (Laird et al., 2009; Mesulam, 1998; Poldrack, 2006). 
+
+This debate makes the implicit, yet significant assumption that those two concepts have a discrete representation in neurobiology. 
+
+(Bzdok et al., 2012b; Spreng et al., 2009). It should hence be carefully called into question whether terms such as "mirror neuron system" or "theory of mind" are an adequate choice of words to refer to discrete neurobiological processes in humans. Taken together, social neuroscience has so far heavily relied on terms and concepts that have been borrowed more traditional, non-neurobiological scientific disciplines. It is however largely unknown how well they grasp neurobiological processes underlying social interaction
+
+
+N. Bostrom on brain simulation:"..the aim is to capture enough of the brain properties.. Much of the messy biological detail is irrelevant."
+
+
+G. M. Shepherd: "Nothing in neuroscience makes sense except in the light of behavior"
+->
+Edward O. Wilson: "Disturb Nature and see if she reveals a secret."
+makes it unlikely that we will reach exhaustive understanding of
+the human brain by
+\textit{observational}, as opposed to \textit{interventional}, methodology
+alone. 
 
 
 epistemology/brain
@@ -622,7 +672,17 @@ coined (1961, Bellman)
 
 naive
 
+The bias-variance decomposition captures the fundamental tradeoff in statistical modeling between approximating the behavior of the studied phenomenon and generalizing to new data describing that behavior. 
+
+- Domingos2012: The problem of multiple testing is closely related to overfitting: Standard statistical tests assume that only one hypothesis is being tested, but modern learners can easily test millions before they are done
+
 disturbing
+
+Formally, the VC dimensions measure the complexity capacity of a class of functions by counting the number of data points that can be cleanly divided (i.e., "shattered") into distinct groups as a result of the flexibility of the function set. 
+
+Practically, good models have finite VC dimensions: Its assessed performance in a sufficiently large amount of data used for learning confidently approximates the theoretically expected performance in any new data. Bad models have infinite VC dimensions: Regardless of the available amount of data, it is impossible to make generalization conclusions on unseen data. Note that the VC dimensions are unrelated to the target function (i.e., unknown mechanisms underlying the studied phenomenon in nature) but relate to the models used to approximate that target function. Even if the VC dimensions predict learning as very likely, it is still possible that generalization from a concrete dataset fails. Yet, such a dataset is theoretically unlikely to occur. Although the concept of VC dimensions is the most important achievement in statistical learning theory (Abu-Mostafa et al., 2012), they can only be explicitly computed for simple models.
+
+The VC dimensions mathematically formalize the circumstances under which learning can be successful (Vapnik, 1989, 1996). This comprises any instance of learning from a number of observations to derive general rules that capture properties of phenomena in nature, including human learning humans and computer learning. 
 
 
 high-dim. hypercube: 
@@ -649,11 +709,19 @@ Each of the classes has associated with it one or more parameters, sometimes app
 models are built up by employing some kind of search mechanism.
 
 
-That is,
+Put differently,
 when approximating a hypersphere by recourse to a surrounding hypercube,
 the probability mass of the hypercube
 would almost entirely lie outside the hypersphere
 (Domingos, 2012).
+
+Put in yet another way,
+a space divided into isotropic units grows exponentially in the
+number of these units with linearly increasing dimensionality.
+The demands on necessary data however also grow exponentially to
+enable populating these units with data points
+(Bishop, PRML).
+
 
 
 Consequently, all data samples look largely identical
@@ -705,6 +773,10 @@ complexity restrictions.
 
 taming 
 
+Thus it is not surprising that the analysis of high-dimensional data re- quires either modification of procedures designed for the N > p scenario, or entirely new procedures. In this chapter we discuss examples of both kinds of approaches for high dimensional classification and regression; these meth- ods tend to regularize quite heavily, using scientific contextual knowledge to suggest the appropriate form for this regularization.
+
+balance
+
 major concerns
 a) overfitting
 b) high variance
@@ -748,6 +820,11 @@ Inanastronomyandstatisticsworkshopthis year, a speaker remarked that in twenty-f
 
 HCP / TERA
 
+we need to learn
+the low-dimensional manifolds that are
+embedded within high-dimensional data
+
+
 
 - difficulty of finding pertinent hypotheses and increasing motivation towards multi-site studies and ever increasing sample sizes currently challenge the CS foundation of neuroimaging
 
@@ -755,6 +832,15 @@ HCP / TERA
 In sum,
 statistical learning can be viewed as juggling with
 restrictions to complexity.
+
+No single statistical strategy, be it SL, CS, or other,
+can consistently
+do better in all circumstances
+("no free lunch theorem"; Wolpert, 1996). 
+
+The challenge relies in choosing the statistical approach that is best suited to the neurobiological phenomenon under study and the neuroscientific research object at hand.
+
+The choice of any statistical method inherently predetermines the spectrum of possible results and the possible interpretations of the investigation. Any scientific discovery in the brain is only valid in the context of the complexity restrictions that have been imposed on the studied phenomenon by the initial choice of research model (Hastie et al., 2011). Hence, an identical phenomenon should be studied using heterogeneous methods to enable a less biased and more comprehensive characterization (Edelson, 1986; Feyerabend, 1975; Kuhn, 1962; Spencer, 2012).
 
 
 
@@ -775,7 +861,9 @@ Helmstaedter 2011 / deep learning
 - Classification approaches were early used in structural neuroimaging (Herndon et al., 1996) and contributed to improved image preprocessing performance (Ashburner and Friston, 2005).
 
 
+For decades histopathology, lesion studies, and invasive research in non-human primates have been the main neuroscientific workhorses. The advent of neuroimaging methods then leveraged unprecedented insight into brain biology. Task-based neuroimaging studies typically attempt to solicit target mental operations in participants by means of sensory, cognitive, or affective paradigms. This research greatly increased our understanding of the healthy and diseased human brain. Yet, such work rests on a set of strict assumptions, including that a) historically inherited psychological categories are useful description systems for neurobiological phenomena, b) target and non-target mental operations can be statistically distinguished by so-called “cognitive subtraction,” and c) a few dozen participants are sufficient to reliably establish fundamental (patho-)physiological mechanisms in the brain. All these assumptions have repeatedly been questioned. Apart from that, structural neuroimaging approaches, such as voxel-based morphometry, may be used to identify locations in which two groups of subjects, such as patients versus controls, differ from each other in local gray matter (GM) volume. While not being affected by the choice of a particular task, these approaches are also frequently criticized for insufficient sample sizes. In addition, they only allow characterizing presence, absence, or a group-mean effect at a particular location. Finally, methods for individual structural analyses are manifold and have repeatedly been in disagreement.
 
+As a complementary methodological family, machine learning (ML) approaches are characterized by a) making the least assumptions possible, b) being more motivated by mathematical models rather than cognitive theory, and c) automatically mining structured knowledge from massive data resources. Given the widely acknowledged intricacies of and slow progress in schizophrenia research, ML methods lend themselves particularly well. They have the potential to decipher and subsequently render explicit biological indices that might assist diagnosis, treatment, and clinical outcome prediction.
 
 
 Typical big-data problems concern classification or regression of an output variable y with respect to a large number of input parameters x, also called predictor variables or covariates, on the basis of large training sets. 
@@ -783,10 +871,12 @@ Typical big-data problems concern classification or regression of an output vari
 
 Note that this curse of dimensionality does not automatically apply to all big-data algorithms. To the contrary, it occasionally turns out helpful to artificially increase the dimensionality of the parameter space in methods like decision trees or support vector machines 
 
+- Their popularity of SL in neuroimaging increased dramatically in the attempt of "mind-reading" or "decoding" cognitive processes from neural activity patterns (Haynes and Rees, 2005; Kamitani and Tong, 2005)
 
 
 Third, regarding data analysis techniques, it has been proposed to leverage ML as a particularly powerful tool to investigate the neural correlates of two interacting brains (Konvalinka & Roepstorff 2012). ML promises to extend the representational agenda of fMRI investigations (i.e., activation-based analysis) and to an informational agenda (i.e., pattern-information-based analysis) (Kriegeskorte et al., 2006; Mur et al., 2009). In particular, multivariate ML approaches are able to address the four questions whether, where, when and how (Brodersen, 2009). ML can provide new evidence whether a given type of information is encoded by neural activity, where a given type of information is neurally encoded, when it is processed/generated/bound and how information is neurally processed in the human brain. Moreover, single-individual fMRI analyses already pose a high-dimensional statistical problem. Performing two-individual fMRI analyses thus imposes an even more challenging "curse of dimensionality" (Hastie et al., 2011). Automated statistical learning of robust structure (i.e., informational patterns) in large quantities of (neuroimaging) data is a core feature of ML approaches. In this way, the flexibility and capability of ML algorithms for pattern mining in extensive data resources make it particularly attractive for the statistical mastery of online two-brain interaction.
 
+. This prompted the current drift towards more data-driven (i.e., fewer assumptions), higher-dimensional (i.e., more features per observation) neuroimaging analyses on larger samples of neuroimaging data (i.e., more observations).
 
 
 Pietsch:
