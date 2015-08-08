@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.28)  6 AUG 2015 07:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.28)  8 AUG 2015 17:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -737,25 +737,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-./phd.tex:54: LaTeX Error: There's no line here to end.
+./phd.tex:60: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.54 \textit
+l.60 C
+      umulative Impact Factor: $\approx$60
+? 
+
+./phd.tex:63: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 \textit
             {Original papers}
 ? 
 Missing character: There is no √ in font cmr10!
 Missing character: There is no º in font cmr10!
 
-./phd.tex:108: LaTeX Error: There's no line here to end.
+./phd.tex:117: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.108 \textbf
+l.117 \textbf
              {Bzdok D} \& Eickhoff SB.
 ? 
 [2]
@@ -765,137 +775,32 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ∂ in font cmr10!
  [3] [4] [5] [6]
-./phd.tex:469: You can't use `macro parameter character #' in horizontal mode.
-l.469 ... that no single statistical strategy can#
+./phd.tex:478: You can't use `macro parameter character #' in horizontal mode.
+l.478 ... that no single statistical strategy can#
                                                   
 ? 
-[7] [8]
-./phd.tex:626: Misplaced alignment tab character &.
-l.626 neural reuse (Anderson, 2010; Dehaene &
-                                              Cohen, 2007):
-? 
+[7] [8] [9] [10] [11] [12] [13]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+ [14] [15]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ì in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ì in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ò in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ì in font cmr10!
-[9]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ì in font cmr10!
- [10]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ò in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ò in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no à in font cmr10!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no à in font cmr10!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no à in font cmr10!
- [11]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
- [12]
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no ° in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no ° in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no ° in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no ° in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no ° in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no ° in font cmr10!
- [13]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ì in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-
-./phd.tex:841: Misplaced alignment tab character &.
-l.841 ...ower usually increases (Ciulla, Takeda, &
-                                                   Endo, 1999).
-? 
-[14] [15]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ò in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ∂ in font cmr10!
- [16]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ò in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no † in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no † in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no † in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no † in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
- [17] [18]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
- [19] [20] (./phd.bbl
+ [16] [17] (./phd.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1236.
- [21] [22]
+ [18]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 1236.
  (./phd.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1236.
@@ -906,24 +811,25 @@ Package rerunfilecheck Info: File `phd.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1236.
  ) 
 Here is how much of TeX's memory you used:
- 13027 strings out of 493117
- 186831 string characters out of 6135432
+ 13028 strings out of 493117
+ 186838 string characters out of 6135432
  348955 words of memory out of 5000000
- 16197 multiletter control sequences out of 15000+600000
+ 16199 multiletter control sequences out of 15000+600000
  7738 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,6n,35p,2217b,364s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,5n,35p,1731b,364s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
 usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on phd.pdf (22 pages, 159829 bytes).
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
+Output written on phd.pdf (18 pages, 160665 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
- 139 compressed objects within 2 object streams
- 54 named destinations out of 1000 (max. 500000)
+ 162 PDF objects out of 1000 (max. 8388607)
+ 132 compressed objects within 2 object streams
+ 53 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
