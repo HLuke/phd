@@ -48,7 +48,7 @@ Dr. Bertrand Thirion, INRIA, Saclay, France\\
 
 Send for review:
 Elvis, Michael, Guillaume, Denis, Conrad, Robert,
-Bertrand
+Bertrand, JR, Konstantin
 
 
 \bigskip
@@ -122,11 +122,13 @@ In: \textit{The neurobiology of schizophrenia}, Springer, Heidelberg.
 
 \section*{1 Introduction}
 
-\subsection*{1.1 Analytical versus heuristic views of nature}
+\subsection*{1.1 Analytical and heuristic accesses to nature}
 
 The world around us is complex and volatile.
 %
-A large proportion of human research efforts are meditated by the 
+A large proportion of human research efforts are undertaking
+in an \textit{analytical} fashion
+based on the 
 "the unreasonable effectiveness of mathematics in the natural sciences."
 This was phrased by the Hungarian-American
 physicist, mathematician, and Nobel laureate Eugene P. Wigner (1960).
@@ -137,7 +139,7 @@ natural regularities exist in the world. He goes on to
 say that it might be even more surprising that humans can actually
 find these regularities and use them to their advantage.
 Similarly, Albert Einstein said:
-“The most incomprehensible, is that the world is comprehensible.” 
+"The most incomprehensible, is that the world is comprehensible." 
 %
 Starting from human-conceived axiomes
 we have derived always more complicated
@@ -152,18 +154,19 @@ On the one hand,
 an identical regularity can often be equally well described in very distant
 branches of mathematics.
 On the other hand,
-identical mathematical conclusions have also reemerged from derivation of
+identical mathematical conclusions have reemerged from derivation of
 a priori unrelated assertions.
 %
 Indeed, the same formal language has proofed very apt in
 the study of completely unrelated topics and diverging scientific disciplines.
-This includes movements of celestial objects in the universe studied in astronomy,
-metabolism pathways governing the inner life of the cell studied in biochemistry,
+This includes movements of celestial objects in the universe
+studied in astronomy
 and
-ABC.
+the metabolism pathways governing the inner life of the cell
+studied in biochemistry.
 %
 Many rules about the world can thus be perfectly grasped
-(Hardy, Apology).
+(Hardy, "Apology").
 As another simple example,
 Fibonacci numbers (1, 1, 2, 3, 5, 8, 13, etc.)
 reappear in many natural phenomena.
@@ -181,8 +184,9 @@ that mathematical conceptualization
 evolves as a feature of human cultural evolution (Tomasello, 2001).
 Even the most abstract mathematical concepts can
 be exchanged between individuals. Consequently,
-they can be easily passed on across generations and geographical distances.
-It is interesting to note that
+this knowledge resource can be easily passed
+on across generations and geographical distances.
+One may note that
 there is usually consensus among mathematicians
 about the architecture of their discipline.
 From an anthropological perspective,
@@ -226,11 +230,11 @@ three recent empirical observations:
   models that have been designed according to
   extensive domain expertise.
   \item There appears to be a minimal threshold of training data
-  for deriving models that suddenly exhibit emergence properties.
+  for deriving models to suddenly exhibit emergence properties.
 \end{enumerate}
 
-One prominent example for such heuristic modelling of nature is
-automatic translation of human languages.
+One prominent example for modelling nature in such a \textit{heuristic} fashion is
+automatic language translation of human text and speech.
 Translation systems based on 
 human-derived systems of grammar rules have perhaps never achieved
 satisfactory success (P. Norvig, 2011, "On Chomsky").
@@ -240,9 +244,21 @@ deterministic rules appeared insufficient for building
 language models that can cope with real-world settings.
 %
 Statistical machine translation was more successful
-by implementing probabilistic hidden Markov models
+by implementing probabilistic hidden Markov models (HMM)
 as a heuristic approach.
-The class of hidden Markov models (HMM)
+%
+The next word or N-gram is predicted
+only by the one (order 1) or few (order n) preceding ones
+with equal transition probabilities (Bengio, 199X "Markovian Models").
+This special case of a recurrent neural network
+computes the conditional probabilities of the next language element
+depending on the most recent history of these elements
+based on a dictionary of known elements.
+The transition matrix of human language can be easily \textit{learned}
+from data by observing a preferably long stream of
+real-world language (i.e., a "corpus").
+%
+The class of HMMs
 thus became a dominanting feature
 of computational linguistics.
 %
@@ -261,9 +277,10 @@ a protein's \textit{known} primary structure
 (i.e., 1D string of aminoacids)
 to
 its \textit{unknown} tertiary/quaternary structure
-(i.e., the 3D folding of the aminoacid string that subserves function).
+(i.e., the combination of 3D foldings
+of the aminoacid string that subserves function).
 %
-Of the millions of existing proteins
+Among the millions of existing proteins
 we only know the tertiary/quaternary structure of
 approximately 30.000 ones.
 The structural configuration is however necessary to identify the position of
@@ -281,7 +298,7 @@ as a black box.
 %
 State-of-the-art neural network algorithms
 have very recently solved this heuristic learning problem
-better than any previous approach in acadmia or industry
+better than any previous approach in academia or industry
 (Dahl et al., 2014; Unterthiner et al., 2015).
 These investigators thus showed that biological activity
 can be reliably predicted from single aminoacid strings
@@ -307,8 +324,11 @@ might be sufficient to
 algorithmically extract
 the heuristics of its interaction behavior with the world.
 This has recently entailed a shift
-of attention from model complexity to data complexity.
-In the absence of any analytical alternative access,
+of attention
+from model complexity to data complexity
+and
+from purely mathematical treatment to giving up some control to self-emergening patterns.
+In the absence of an analytical alternative access,
 simple mathematical models can thus automatically
 formalize diverse classes of natural phenomena
 depending on the quality and quantity of
@@ -327,7 +347,7 @@ Given its eclectic character, it may come as no surprise that statistics
 has developed both analytical and heuristic strategies
 to model regularities of phenomena in nature.
 Yet, analytical and heuristic statistical cultures
-have emerged independently (Breiman, 2011).
+have developed independently (Breiman, 2011).
 They differ with regard to historical origin, mathematical foundation,
 and modelling goal.
 
@@ -363,21 +383,22 @@ to judge existing versus non-existing effects in nature.
 Rather, the intention was a preliminary tool to
 filter which potential effects should be more explicitly tested (Nuzzo, 2014).
 %
-Notably, if the hand-selected model is a bad description of
-the natural phenomenon under study,
-the drawn conclusions may be wrong.
+Notably, the drawn conclusions may be wrong
+if the hand-selected model is a bad description of
+the natural phenomenon under study.
 %
 Nevertheless, statistical hypothesis testing probably fit perfectly
-in its time of conception and adoption.
-It was designed for use with mechanical calculators
+in its time of inception and adoption.
+Indeed, it was designed for use with mechanical calculators
 (Efron and Tibshirani, 1991). Gaussian distributional assumptions
 have been very useful in many instances for
 mathematical convenience and, hence, computational tractability.
 Additionally, it suited perfectly the Popperian view of
-critical empiricism in academic discourse:
+critical empiricism in academic discourse
+(Popper, 1935/2005 "Logik der Forschung"):
 scientific progress is to be made by continuous replacement of current
 hypotheses by always more explanatory hypotheses
-using verification and falsification (193X).
+by means of \textit{verification} and \textit{falsification}.
 The rationale behind hypothesis falsification
 is that even a lot of evidence cannot confirm
 a given theory in an \textit{inductive} way, 
@@ -403,22 +424,23 @@ rather than academia (cf. Daniel and Wood, 1971).
 They hold that natural phenomena
 can be studied by estimating regularities in the inputs and
 outputs to the black box without making assumptions
-about its interal "true" mechanisms.
+about its internal "true" mechanisms.
 A statistical model is thus derived that expresses
 relationships between the input and output variables
-whose parameters are learned by training data.
+whose parameters are learned by training data (Abu-Mostafa, 2012).
 Put differently, a new function with potentially thousands of
 parameters is created
-that can predict the output from the input alone.
-The input data thus need to represent
+that can predict the output from the input alone,
+without explicit programming model.
+The input data thus need to represent different variants of
 all relevant configurations of the examined phenomenon in nature.
-%
-Please note that SL here summarizes the seemingly more specific terms
-data-mining, pattern recognition, artificial intelligence,
-and machine learning that are often employed inconsistently.
-Members of
+Well-known members of
 the SL family include for instance k-means clustering,
 Lasso/Ridge regression, and support vector machine classification.
+%
+Please note that SL here summarizes the seemingly more specific terms
+"data-mining", "pattern recognition", "artificial intelligence",
+and "machine learning" that are often employed inconsistently.
 The independent historical origin of CS and SL families is even
 witnessed by the most basic terminology. 
 In the CS literature inputs to statistical modeling
@@ -430,8 +452,8 @@ in the SL literature (Hastie et al., 2011).
 When evaluating whether a certain problem is a possible target for SL
 three requirements come into play (Abu-Mostafa, 2012):
 \begin{enumerate}
-  \item A regularity exists.
-(if there is no pattern, then there is no harm in trying SL).
+  \item A regularity exists
+(if there is no pattern, then it might still be worth trying SL).
   \item The regularity cannot be formalized analytically
 (otherwise one can still apply SL, but it might not create the best model).
   \item We have data on the problem (the more, the better).
@@ -439,10 +461,12 @@ three requirements come into play (Abu-Mostafa, 2012):
 %
 This statistical framework led to a surge of new
 computer-intensive statistical techniques since 1980
+that can be difficult to compute on a normal calculator
+and
 that are less concerned with mathematical tractability (Efron, 1991).
 In the 95'ies suppor vector machines (SVMs)
 proofed to be better than the back then de-facto-standard neural networks
-in both classification and regression problems (Valpnik, 19??).
+in both classification and regression problems (Valpnik, 1996).
 This development has been flanked by changing properties of datasets that
 are always higher-dimensional (i.e., more features per observation)
 and
@@ -451,29 +475,31 @@ on larger samples (i.e., more observations).
 This is a trend that is not specific to
 neuroimaging research but also takes places
 in other scientific disciplines,
-including weather forecasting and economic predictions
+including but not exclusive to weather forecasting and economic predictions
 (Manyika et al., 2011).
 In sum,
 statistical learning was mostly fashioned
 for problems with many data points with largely unknown
 data generating processes
 that are emulated by a mathematical function
-created on-the-fly by a machine.
+created en passant by a machine.
 
 
-Importantly, certain statistical
+Importantly, some statistical
 methods cannot be easily categorized by the CS-SL distinction.
-Statistical methods span a continuum between the two poles of CS and SL
+Statistical methods do, in fact, span a continuum between the two poles of CS and SL
 (Jordan/Frontiers in Massive Data, p. 61).
 Nevertheless, the two families of statistical methods
 can be easily distinguished by a number of archetypical properties.
-Bayesian statistics do for instance are orthogonal to the CS-SL distinction
-and can be adopted in both methodological families in various fashions.
+Bayesian statistics are however orthogonal to the CS-SL distinction
+and can be adopted in both methodological families in various flavors.
+%
 Neither can the terms univariate versus multivariate
 (i.e., relying on one versus more than one input variable)
 be clearly grouped into either CS or SL.
 %
-Neither CS nor SL can generally be considered superior.
+More generally,
+neither CS nor SL can generally be considered superior.
 This is captured by the \textit{no free lunch theorem}
 stating that no single statistical strategy can#
 consistently do better in all circumstances (Domingos, 2012; Wolpert, 1996).
@@ -482,10 +508,10 @@ the statistical approach that is best suited
 to the neurobiological phenomenon under study and the neuroscientific research object at hand.
 
 
-Regarding their modelling goals, CS and SL exhibit various differences.
+Regarding modelling goals, CS and SL exhibit various differences.
 CS typically aims at modeling the black box by making a set of
 accurate assumptions about its content,
-e.g. the nature of the signal distribution.
+e.g. the type of signal distribution.
 Contrarily, SL typically aims at finding any way to model
 the output of the black box from its input
 while making the least assumptions possible (Abu-Mostafa et al., 2012).
@@ -504,15 +530,17 @@ whereas in SL the model is
 generated in the process of the statistical investigation.
 In more formal terms,
 CS therefore closely relates to parametric statistics
-for confirmatory data analysis
+for \textit{confirmatory} data analysis,
 whereas SL closely relates to non-parametric statistics
-for exploratory data analysis.
-In more practical terms, CS is typically applied to experimental data,
-where the variables were controlled by the investigator
-(i.e., system under studied is perturbed),
+for \textit{exploratory} data analysis
+(Tukey, 1977 "Exploratory data analysis").
+In more practical terms, CS is typically applied to experimental data
+that were generated
+the investigator controlled the variables of interest 
+(i.e., the system under studied is perturbed),
 while SL is typically applied to observational
-data without such structured influence
-(i.e., system is left unperturbed) (Domingos, 2012).
+data without such structured influence by the investigator
+(i.e., the system is left unperturbed) (Domingos, 2012).
 The work unit for CS is the quantified
 significance associated with a statistical
 relationship between few variables given a pre-specified model.
@@ -522,14 +550,16 @@ the robustness of \textit{special structure} in the data (Hastie et al., 2011).
 CS therefore tests for a particular structure in the data,
 whereas SL explores and discovers structure in the data.
 Formally, CS implements data modeling by
-imposing an a priori model in a top-down fashion,
+imposing an a priori model in a top-down manner,
 whereas SL implements algorithmic modeling by fitting
-a model as a function of the data at hand in a bottom-up fashion.
+a model as a function of the data at hand in a bottom-up manner.
 %
-Intuitively, the truth is believed
+Intuitively, the "truth" is believed
 to be in the model (cf. Wigner, 1960) in a CS-contrained world,
 while it is believed to be in the data
 (cf. Halevy et al., 2009) in a SL-constrained world.
+
+
 As a drastically oversimplified, yet useful, conclusion,
 CS preassumes and tests \textit{a model for the data},
 whereas SL learns \textit{a model from the data}.
@@ -539,7 +569,7 @@ both human and computer learning are theoretically
 more conceivable in a probabilistic rather than
 deterministic sense
 (Abu-Mostafa et al., 2012; Dayan et al., 1995; Friston, 2010; Gregory, 1980).
-Moreover, each probabilistc model can be viewed as a superset
+Moreover, each probabilistc model can be viewed as a superclass
 of a deterministic model (P. Norvig, "On Chomsky").
 %
 Taken together,
@@ -560,11 +590,12 @@ With the language from above,
 the human brain might constitute a phenomon in nature that
 can \textit{not} be perfectly grasped by mathematical formalism alone.
 More concretely,
-the \textit{most pertinent structure} we should assume for the human brain,
+the \textit{most pertinent structure}
+that we should assume for the human brain,
 when measured by
 contemporary functional neuroimaging techniques (cf. next passages),
 is currently unknown.
-Hence, the neuroimaging access to brain science can readily be framed as
+Hence, the neuroimaging access to neuroscience can readily be framed as
 a problem of \textit{representation learning} (Bengio, 2014).
 It is conceivable
 that this task can be solved without exhaustive
@@ -581,12 +612,13 @@ of our closest ancestors, the non-human primate, turns out to be
 strikingly small.
 This has encouraged the conviction that one or very few key genetic
 adaptations in the primate lineage have unchained an avalanche
-of cognitive and cultural inventions that led to today's civilization
+of cognitive and cultural inventions that led up to today's civilization
 (Tomasello, 2001).
 That is, the human species might be much more defined by the
 increasingly fast cultural evolution rather the ramifications
 of slow biological evolution.
-Key cognitive improvements, such as the emergence of verbal language,
+Crucial cognitive improvements,
+such as the emergence of verbal language, 
 might have fueled cultural improvements that, in turn, enabled
 further cognitive improvements et cetera pp.
 This form of \textit{online learning} is a very plausible and decisive
@@ -620,7 +652,7 @@ Given this recent acceleration in cultural evolution
 it might be
 rather unlikely that the human brain has developed dedicated
 neuronal populations to subserve the panoply of novel behaviors.
-Rather, evolutionarily recent mental tasks
+Rather, evolutionarily recent mental skills
 (e.g., reading and writing, explicit pedagogy, and
 symbolic mathematics)
 are realized by recombining low-level circuits that initially
@@ -632,16 +664,17 @@ Non-human primates are lacking many of the sophisticated
 mental operations that
 are crucially important for maintaining human societies
 (Mesulam, 1998; Tomasello, 2003).
-Indeed,
+In fact,
 the "social brain hypothesis" states that our
 computationally powerful brains are not an adaptation to
-solving problems posed by the physical environment,
+solve problems posed by the physical environment,
 but for successfully coping with increasingly complex human social systems
-(Byrne et al., 1988; Dunbar and Shultz, 2007).
+(Humphrey, 1984; Byrne et al., 1988; Dunbar and Shultz, 2007).
 Yet, it is becoming increasingly clear that socialaffective processing
 in the human brain is probably realized by domain-general
 brain regions and networks not specific to maintaining social interactions
-(Bzdok et al., Neurobiology/Morality; Behrens et al., 2009 Computation).
+(Bzdok et al., 2015 "Neurobiology of Morality"; Behrens et al., 2009 Computation;
+Barret et al., 2013).
 These considerations entail a second challenge in brain science:
 It is probably impossible to know what purpose neural
 processing in a given part of the brain has originally evolved to serve.
@@ -678,18 +711,20 @@ its various association systems and cell masses so numerous and
 complex, and challenging,
 that understanding will forever lie beyond our most committed efforts."
 %
-More concretely, it remains largely elusive whether distinct behavioral differences
-are associated with changes of
+More specifically, it remains largely elusive
+whether distinct behavioral differences
+between individuals are associated with changes of
 cell bodies, dendrites, axonal connections, and/or glial cells
 (Kanai et al., 2011).
-%
-From a fundamentally neurobiological perspective,
+That is,
 we do not have clear understanding of how
 this set of microstructures interact to
 solving neural computation problems,
 let alone their inter-individual differences.
+%
 From a methodological perspective,
-the conventional volumetric modelling techniques are na\"ive to
+the conventionally employed
+volumetric modelling techniques are na\"ive to
 many types of possible morphological differences.
 For instance,
 it is currently difficult to statistically grasp
@@ -708,12 +743,12 @@ for instance currently underresearched.
 They are even hardly known in the monkey (Stephan, 2007)
 that usually serves a fallback system for human
 connectivity investigations (Mesulam, 2012 "The evolving").
-In humans, the majority of homologous areas feature
+In humans, the majority of homologous brain areas feature
 direct anatomical connections.
 Nevertheless, as two textbook examples,
 why the language and attention processes typically lateralize to
-the left and right, respectively,
-is understood only in fragments
+the left and right hemisphere, respectively,
+is currently understood only in fragments
 (Corbetta 2000; Stephan et al., 2003; Price et al., 2010).
 
 
@@ -721,19 +756,19 @@ It is further unlikely that we
 will reach exhaustive understanding of
 the human brain by mere
 \textit{observational}, as opposed to \textit{interventional},
-research methods.
+classes of research methods.
 This idea is reflected in
-Edward O. Wilson's word 
+Edward O. Wilson's word s
 "disturb Nature and see if she reveals a secret"
 as well as in
-G. M. Shepherd's word
+G. M. Shepherd's words
 "Nothing in neuroscience makes sense except in the light of behavior."
 %
-Purposely induced focal lesions of brain tissue in rats have perhaps
-first been systemically related to resulting differences in
+Purposely induced focal lesions of brain tissue in rats have early
+been systemically related to resulting differences in
 behavioral performance indices
 (Franz and Lashley, 1917).
-In hamsters, cats, and monkeys brains,
+In hamsters, cats, and monkeys,
 decortication entails only small sensory or motor effects,
 while such tissue impairments of the neocortex in humans
 result in much more pronounced and less reversible 
@@ -748,7 +783,7 @@ until about 20 years ago.
 %
 However, inferring neurobiological insight from lesion findings constitutes
 yet another challenge to brain science.
-It would be an overly simplistic conclusion that
+It constitute an overly simplistic conclusion that
 changes in behavior after destroying brain tissue in a
 circumscribed brain area directly reveals functional roles
 of that brain area (Young, 2000).
@@ -777,10 +812,12 @@ a particular brain area
 (Passingham et al., 2002; Kelly et al., 2012 Neuroimage).
 
 
-The activation patterns of neuronal populations in each brain area
-exhibit oscillatory properties.
+Each area in the brain exhibits
+activation patterns of neuronal populations with
+oscillatory regularities.
 These oscillatory circles and their associated behaviors are
-highly preserved in mammalian evolution.
+highly preserved in mammalian evolution
+(Buzsaki, 2013 "Scaling brain size").
 %
 Perhaps since Hubel and Wiesel's (1965) description of increasingly
 complex processing of neurons in the primary visual cortex
@@ -790,7 +827,7 @@ modulating top-down information streams.
 Axonal feed-forward and feed-back connections
 are indeed a very good predictor of \textit{what} the next processing step is.
 Yet, brain oscillations are capable of predicting \textit{when}
-the next processing step will occur.
+this next processing step will occur.
 %
 Oscillation measured by EEG and MEG techniques might be the most
 attractive access to another challenge in brain science:
@@ -803,7 +840,7 @@ spatially distributed and temporally coherent electrophysiological activity.
 %
 In animals, oscillatory but not spiking activity of neuronal populations appears
 to be closely associated with sensory input processing.
-Yet, the interpretation of oscillation findings is demanding
+The interpretation of oscillation findings is however demanding.
 This is because they
 simultaneously reflect
 a maintenance equilibrium, sensitivity to external stimuli, and
@@ -818,13 +855,12 @@ The same rythm can reflect different categories of computational processes
 in different brain areas and networks. Some brain structures are
 characterized by specific rythms that may not be found in the rest
 of the brain.
-Different frequency bands can be subserve a same cognitive process, while
+Different frequency bands can subserve a same cognitive process, while
 different cognitive processes can be realized by the same frequency bands.
 %
 Finally,
-high frequencies govern large scale networks in the brain
-including influences on small neuronal space
-with slow oscillatory patterns.
+high frequencies govern large-scale networks in the brain that, in turn,
+influence small local neuronal space with slow oscillatory patterns.
 
 
 Also from a philosophical perspective
@@ -873,22 +909,33 @@ Biological processes in the brain are an instance of
 such not directly experienceable phenomena underdetermined
 by human language that entail interpretative conundrum.
 %
+More concretely,
+there is still no community-wide consensus on
+a comprehensive description system of
+human mental operations (Poldrack, 2006 and 2011).
+This has caused considerable heterogeneity in
+how neuroimaging experiments have been motivated and conducted.
+Moreover, it resulted in frequently inconsistent findings
+that are difficult to reconcile conceptually. 
+%
 In sum,
 cognitive neuroscience has so far heavily relied on concepts
 borrowed more traditional, non-neurobiological scientific disciplines.
 These considerations are especially relevant to investigations
 whose conclusion heavily rely on CS.
-Statistical hypothesis testing makes the huge implicit assumption that
-the underlying semantics concepts of the forumulated hypotheses are "true".
+Statistical hypothesis testing makes the
+strong implicit assumption that
+the semantics concepts used to forumulate 
+the null and altenrative hypotheses are "true".
 
 
 The last challenges to the neuroscientist
 mentioned here are of epistemological origin.
-Biology as a whole has only a very small legacy in abstract theory,
-which probably includes the history of the biology of the brain.
+Biology as a whole has modest legacy in abstract theory.
+This probably includes the history of the biology of the brain.
 In particular,
 the spectrum of permissible conclusions
-that can be drawn from neuroscientific investigations is strongly influenced
+that can be drawn from neuroscientific investigations is strongly conditioned
 by the following three questions
 (Carruthers, 2009; Dehaene, MBE 2007):
 \begin{enumerate}
@@ -898,7 +945,7 @@ by the following three questions
 by directly contemplating itself (i.e., introspection) or by
 indirectly contemplating an internalized self-model acquired through
 interaction with others?
-  \item To what extent is the self-reflexive description of the phenology of
+  \item To what extent is the self-reflexive description of the phenomenology of
   the human mind by the human mind itself immanently
   limited and paradoxical?
 \end{enumerate}
@@ -908,12 +955,13 @@ Taken together,
 there are many intricacies about neurobiology and 
 the mosaic knowledge that we currently have about it.
 %
-Despite $\approx$200 years of brain research,
+Despite $\approx$200 years of neuroscience,
 we are probably not even close to something like a unified theory of
 brain function
 that neuroscientists from different fields would accept
 (cf. Friston, 2010 "Free energy principle"; Bar, 2009 "Predictions").
-This complicates the formulation of precise, neurobiologically
+This caveat considerably complicates
+the formulation of precise, neurobiologically
 valid hypotheses that can be experimentally tested in targeted studies.
 %
 Therefore, it might be helpful to use heuristics-establishing
@@ -945,8 +993,9 @@ language translation and drug discovery (cf. 1.1).
 
 \subsection*{1.4 The curse of dimensionality}
 
-Not only conceptual challenge neuroscientific investigations,
-but also the large amount of the data the field is dealing with
+Not only conceptual and neurobiological challenges,
+but also the increasing quantities of analyzed data
+put neuroscientific research to the test
 (Gorgolewski \& Poldrack, NNR).
 %
 Today's neuroimaging methods offer very high resolution in
@@ -992,6 +1041,7 @@ unit number with linearly increasing dimensionality.
 As the main practical conclusion,
 the amount of data necessary to populate these units
 also grows exponentially
+with linearly increasing inputs variables
 (Bishop, PRML).
 
 
@@ -999,7 +1049,7 @@ also grows exponentially
 Additionally,
 the target function is almost always unknown
 in statistical learning investigations.
-Hence, we have no knowledge of whether or not
+Hence, we frequently have no knowledge of whether or not
 special structure may exist in the input data that can be exploited.
 %
 Knowledge of special structure of the phenomenon under study
@@ -1037,7 +1087,7 @@ under which learning processes can be successful (Vapnik, 1989, 1996).
 This comprises any instance of learning
 from a number of observations
 to derive heuristic rules that capture properties of phenomena in nature,
-including both learning in humans and machines.
+including learning in humans and machines.
 Formally, the VC dimensions measure the
 complexity capacity of a class of approximating functions
 (i.e., the function space). 
@@ -1074,7 +1124,7 @@ First,
 we can deliberately exclude members of the hypothesis set.
 Viewed from the bias-variance trade-off, this calibrates
 the sweet spot between underfitting and overfitting.
-From the perspective of VC dimensions,
+Viewed from Vapnik's statistical learning theory,
 the VC dimensions can be reduced and thus the generalization performance
 increased.
 %
@@ -1083,7 +1133,7 @@ Yet, these choices are typically guided by external knowledge beyond
 the data at hand.
 %
 Third,
-different complexity restrictions lead to different
+different complexity restrictions typically lead to different
 best approximating functions.
 
 
@@ -1112,6 +1162,45 @@ neurobiological reality as observed by fMRI scanning.
 
 - Argumente von DFG Antrag
 
+Until 20 years ago, lesion studies and brain stimulation during neurosurgery were the main tools to investigate human brain function. The neuroimaging era of positron emission tomography (PET) and functional magnetic resonance imaging (fMRI) then enabled non-invasive, in-vivo brain research in health and disease. Experimental neuroimaging has provided insight into the cerebral localization of sensory processing, motor actions, and affective functions. Yet, the working principles of the human brain still remain largely elusive.
+
+
+we have to elucidate the regionally specific localization of mental processes. Until about 20 years ago, the most common approaches to localize human brain functions consisted in lesion studies and direct brain stimulation during neurosurgical interventions. The beginning of the functional neuroimaging era by positron emission tomography (PET) and functional magnetic resonance imaging (fMRI) then enabled the non-invasive, in vivo investigation of functional specialization in the human brain. Based on local changes in cerebral blood flow, glucose- or oxygen-metabolism, these techniques allow the identification of regional increases in neural activation during the performance of specific tasks. Usually, the neural correlates of a given process of interest are isolated by subtraction of the activation measured a closely related (control) task that is supposed not to evoke the psychological process of interest. Evidently, the spectrum of neuroimaging-compatible tasks is almost only limited by the scanner surroundings and the interdiction of head movements. In fact, the constantly increasing publication rate currently counts more than 1,000 new neuroimaging articles per year [1]. Functional neuroimaging has hence provided a wealth of information on the cerebral localization of sensory processing, motor actions as well as cognitive and affective functions.
+
+In spite of its success in revealing the location of regionally specific effects in health and disease, however, functional neuroimaging using PET or fMRI suffer from several limitations that restrict the amount of knowledge that may be gained from each experiment:
+Usually, between 15 and 30 subjects participate in a neuroimaging study. Although this denotes a remarkable increase since the beginnings of neuroimaging science, it is still a rather small sample size comparing to other scientific disciplines, such as social sciences, population genetics or clinical trials. In contrast to experimental psychology, the considerable logistical and financial efforts of each neuroimaging study discourage replication studies as well as the combination of several studies, leading at times to the publication of isolated findings.
+
+the recorded signals are thus potentially confounded by a vast range of biological, technical and methodological factors, which reduce reliability of the obtained results. In fact, the underlying relationship between neuronal activity and measured signals is currently not exhaustively understood. On the other hand, PET and fMRI yield relative, rather than absolute, signals related to neuronal activity. The neural correlates underlying a given psychological task thus need to be derived by subtraction between two experimental conditions rendering the resulting activation pattern context-dependent. It has, however, repeatedly been questioned that conclusions on general physiological or pathological mechanisms can be drawn if reliant on the neuroimaging-inherent subtraction logic [12]. In other words, even though frequently discussed in terms of general mechanisms, the results of a particular neuroimaging study actually just pertain to the difference of the two specifically chosen conditions.
+
+These manifold limitations of any neuroimaging study thus severely impede the amount of knowledge that may be gained from each individual neuroimaging study. This consideration has consequently prompted a need for synthesizing and integrating existing research. By judging concordance and disconcordance across a high number of studies, the limitation of each individual PET or fMRI experiment may be overcome and a synoptic view on earlier isolated findings can be acquired. 
+
+That is, most neuroimaging articles report significant activation foci according to either the Talairach-Tournoux [13] or Montreal Neurological Institute [MNI; 5] 3D reference space, which in turn are easily being converted into each other [8]
+
+although the mechanisms underlying the information produced are not fully understood (Logothetis, Pauls, Augath, Trinath, & Oeltermann, 2001).
+
+
+Taken together, the biggest fraction of the various brain signals does not correlate with a particular behavior, stimulus, or experimental task. The constant blood flow, oxygen intake, and energy consumption are highly linked. These partially uncouple in a task setting, but the relative change is very small.
+
+these techniques allow the identification of regional increases in neural activation during the performance of specific tasks. Usually, the neural correlates of a given task (reflecting a mental process of interest) are isolated by subtraction of the activation measured during a closely related task (i.e., control task) that is supposed not to evoke the psychological process of interest. Evidently, the spectrum of neuroimaging-compatible tasks is practically only limited by the scanner surroundings and the interdiction of head movements.
+
+
+Some properties:
+
+highly vascularized cortical areas (e.g., primary sensory areas and the speech-related Broca and Wernicke's areas) have a higher baseline probability to be observed in neuroimaging studies (Harrison et al., 2002).
+
+Blood demand and blood supply generally work in concert in the human brain. In the example of task-induced metabolic consumption, onset of vibratory stimulation of participants' hand entails regional accumulation of metabolic equivalents that cause regional blood flow increase (cf. neurovascular coupling below) in the contralateral somatosensory cortex (Fox et al., 1986). On a microanatomical scale, local increases in neural activation entail privileged local blood supply at the expense of immediately neighboring neuronal populations (i.e., vascular-steal phenomenon). On a macroanatomical scale, however, regional increases in brain activity due to recruitment of a particular cognitive process induce regional blood flow changes of only a few percent. The regional changes in blood flow accompanied by cognitive phenomena are thus not measurable as changes in total blood flow to the brain, although the brain's hemodynamic reserve permits doubling the blood influx.
+
+The neuroscientist is typically interested in neural activity, which was suggested to induce regional blood flow changes already in the 19th century (Roy et al., 1890). Physiologically, neurovascular coupling describes the brain vasculature's time-lagged dilation response to locally increasing metabolic products. This is directly observable using water or butanol positron emission tomography (PET) and indirectly using functional magnetic resonance imaging (fMRI) as the BOLD (blood-oxygen level-dependent) signal (Fig. 1). The BOLD signal is caused by local changes in blood oxygenation, i.e., the oxyhemoglobin versus deoxyhemoglobin ratio (red blood cells carrying versus not carrying oxygen) (Ogawa et al., 1990; Logothetis et al., 2004). It exhibits an initial dip after the onset of neural activity increase that is attributed to the fast local increase in deoxyhemoglobin. The ensuing hyperperfusion and the thus generated (relative) hyperoxygenation (cf. next paragraph) then dictate the BOLD signal shape (hemodynamic response function). It is variable across the brain regions of an identical organism, across organisms, and probably across different tasks. Neural activation is finally followed by re-inhibition of blood flow observable as an undershoot at the end of the BOLD signal (Logothetis et al., 2001).
+Comparing neural activity and corresponding BOLD signals, the BOLD signal is at least one order of magnitude noisier, scales roughly linearly with neural activity, and is better predicted by local field potentials than multi-unit spiking activity. The BOLD signal is possibly more associated with input to and processing in a local neuronal population rather than its output. There is thus no clear-cut quantitative relation between the spike rate of neuronal populations and the ensuing BOLD response. Rather, the BOLD signal reflects a mixture of transient spikes and continuous membrane potentials (Logothetis et al., 2004).
+
+This implies intra- and inter-neuronal house keeping functions as particularly important in the human brain's resting functionality. In contrast to this baseline consumption, environmental events evoke increased energy costs of only less than 5%. Importantly, however, most neuroimaging investigations focus on these (minor) metabolic changes due to external stimulation, rather than the majority of metabolic demands due to biochemical maintenance of neuronal architecture.
+
+
+
+
+
+
+
 
 
 - Their popularity of SL in neuroimaging increased dramatically in the attempt of "mind-reading" or "decoding" cognitive processes from neural activity patterns (Haynes and Rees, 2005; Kamitani and Tong, 2005)
@@ -1134,6 +1223,41 @@ we might never have discovered with the emergence of
 brain imaging techniques:
 
 DMN:
+
+Without focus on an explicit task the brain is not at rest.
+
+On a macro-scale, the metabolic baseline turnover is not equally distributed across the brain. The metabolic demands are variable across brain regions and (to a smaller extent) across time. The highest metabolic consumption locates, first, to the posterior cingulate cortex extending into the adjacent retrosplenial cortex and precuneus and, second, to the medial prefrontal cortex extending into the anterior cingulate cortex (Raichle et al., 2001; Reivich et al., 1979).
+
+Resting-state signal: Fluctuations in physiological signals recorded in the absence of externally structured experimental settings that are reflected in voxels' time courses. These signals are thought to have neuronal, metabolic, cardiac, and respiratory origins.
+
+Resting-state network (RSN):  Coherent spatiotemporal coupling in resting-state BOLD fluctuations yields a set of robust neural networks.
+
+Taken together, the biggest fraction of the various brain signals does not correlate with a particular behavior, stimulus, or experimental task. The constant blood flow, oxygen intake, and energy consumption are highly linked. These partially uncouple in a task setting, but the relative change is very small.
+
+In the absence of task (i.e., during mind wandering), inter-neuronal communication continues.
+
+Importantly, the (small) amplitude of the RS signal is modulated by transient psychological states (e.g., arousal, attention, and alertness) as well as cardiac and respiratory influences. Indeed, the decomposability of the RS signal into independent components suggests a set of distinct influences rather than one coherent signal pattern (Fukunaga et al., 2006). More specifically, evidence exists in favor of a neuron-, metabolism-, vasculature-, and oxygen-driven genesis of the RS signal. 
+
+To date, the stratification of the physiological factors underlying the RS signal is poorly understood. It is, however, commonly agreed that the variability in the RS signal arises from both physiological factors and the organism's mental operations.
+
+It is becoming increasingly clear that brain areas pertaining to social cognition are topographically highly similar to brain areas that increase activity in the idling, unconstrained mind, the so-called “default mode”, and decrease activity during stimulus-driven, goal-directed tasks (Shulman et al., 1997; Spreng et al., 2009). More specifically, brain areas underlying unconstrained cognition were consistently associated with a number of complex, introspective mental tasks, including contemplating mind states, self-focused reflection, mental navigation of the body in space, autobiographical memory recall, and, more generally, envisioning situations detached from reality. 
+
+In task-based neuroimaging studies, the neural correlates underlying a certain psychological function are derived by subtraction between two conditions belonging to a so-called experimental paradigm [5, 6]. The neural correlates of a mental process of interest are thus isolated by subtraction of the activation measured during a closely related task (i.e., control task) that is supposed not to evoke the mental process of interest. Despite the many merits of experimental neuroimaging, it has repeatedly been questioned, from a scientific perspective, whether conclusions on healthy neurophysiology or pathological mechanisms can be drawn if relying on the subtraction logic inherent to experimental neuroimaging [7]. As the results of a particular experimental neuroimaging study reflect the difference of two specifically chosen conditions, similarities and dissimilarities observed across psychiatric disorders might be entirely epiphenomenal. From a more clinical perspective, task-based neuroimaging is also highly unlikely to become diagnostic routine in psychiatry given the necessary human (e.g., importance of administering an experimental paradigm) and hardware (e.g., stimulation devices and presentation programs) infrastructure as well as the numerous manual choices (i.e., subjective interventions) during data analysis.
+
+With respect to structural neuroimaging, two methods are currently dominating (clinical) systems neuroscience. In voxel-based morphometry (VBM) studies, a T1-weighted high-resolution MRI scan is acquired for each participant [8, 9]. These are then automatically segmented into the cerebrospinal fluid, grey (GM) and white (WM) matter. After warping each of these structural images into a common template image in stereotaxic standard space, GM and/or WM are submitted to statistical analysis. This allows for quantitative comparison of the regional amount of GM and WM volume [10], while taking into account individual brain sizes. Diffusion tensor imaging (DTI) studies, on the other hand, do not assess voxel-wise volumetric information but the principal direction, and more specifically also the directedness, of white-matter fiber bundles at each location [11, 12]. This is achieved by measuring to what extent the random walk of local water molecules under diffusion is rather spherical (i.e., moving freely in space) or rather ellipsoid (i.e., moving constrained by axon-sheath-like boundaries). The voxel-wise information on the directedness of diffusion as a proxy for fiber architecture can then be compared between subjects (commonly by fractional anisotropy [FA] as a summary measure) or used to delineate the three-dimensional trajectories of fiber tracts in the human brain in-vivo.
+In comparison to task-based neuroimaging studies, both VBM and DTI studies do not require the participants' adherence to an experimental paradigm. This is of tremendous advantage especially in psychiatric populations given that disturbance of thought defines these medical conditions. It further entails that task-free VBM and DTI studies are not only less demanding and more replicable but also yield easier, faster, and more standardized results. Structural neuroimaging studies, compatible with most standard clinical scanners, thus appear much better suited for clinical translation than task-based investigations. However, VBM and DTI do not yield any information on dynamic brain features, such as neural activity strength, inter-regional coupling, or recruitment of functional brain modules. This represents a major drawback as functional disintegration rather than structural abnormality is currently believed to be at the core of many psychiatric disorders. Additionally, structural neuroimaging markers appear to be more confounded by non-clinical factors (especially age) than functional data.
+
+
+
+
+Correlation analysis can detect temporal coincidence in spontaneous, slow fluctuations (~0.01 - 0.1 Hz) in fMRI signals. This is taken as a measure of RS connectivity between topographically distant parts of the brain. Faster frequencies, not apparent in (intrinsically low-pass filtered) BOLD signals, in turn are predominantly associated with cardiac and respiratory sources. RS connectivity is task-unconstrained by probing participants that lie in the scanner without following a defined experimental task. Instead, participants are instructed to think of nothing in particular, let their minds go, and leave their eyes open/closed or look at a fixation cross. During mind wandering humans mentally shift between various heterogeneous types of thoughts, memories, and predictions. This is why RS connectivity is believed to reflect the repertoire of cognitive operations that the human brain can perform (Smith et al., 2009).
+
+
+Observed RS connectivity patterns led to discovery of the coherent spatiotemporal fluctuations termed resting-state networks (RSN).
+
+The probably best-known RSN is the default-mode network (DMN) (Gusnard et al., 2001) that was discovered with and mainly characterized by RS connectivity. The DMN was initially proposed to be exclusive in decreasing neural activity consistently during experimental paradigms requiring stimulus-guided behavior. This RSN was therefore proposed to reflect the neural correlates underlying unfocused every-day mind wandering (Schacter et al., 2007). This, in turn, would suggest a close correspondence between the physiological and psychological baseline of the human brain (Schilbach et al., 2008). It was later even argued that this network is systematically anti-correlated with brain regions more active during task performance (Fox, et al., 2005). This was recently challenged by repeated reports of brain regions exhibiting both task-constrained and task-unconstrained increases in neural activity (Buckner, et al., 2008). More specifically, the DMN is now known to consistently increase neural activity during a small set of complex cognitive tasks, including social cognition, autobiographical recall, and spatial navigation (Bzdok, et al., 2013; Spreng, et al., 2009). Task-, RS- and meta-analysis-informed research on the DMN thus corroborated that this particular network is consistently decreases activity during externally focused mental tasks and typically increases activity during a small set of internally focused mental tasks.
+
+
 
 It is a limitation of these studies that they attempt to derive the normal function of an area from the effects of damage to that area.
 
@@ -1213,7 +1337,7 @@ Helmstaedter 2011 / deep learning
 \subsection*{2.4 Discussion}
 
 
-
+\bigskip
 \section*{3 Supervised modelling of brain networks}
 
 \subsection*{3.1 Motivation}
@@ -1221,7 +1345,7 @@ Helmstaedter 2011 / deep learning
 \subsection*{3.3 Experimental results}
 \subsection*{3.4 Discussion}
 
-
+\bigskip
 \section*{4 Semi-supervised modelling for structure discovery
 and structure inference}
 
@@ -1231,7 +1355,7 @@ and structure inference}
 \subsection*{4.4 Discussion}
 
 
-
+\bigskip
 \section*{5 Conclusion}
 
 
